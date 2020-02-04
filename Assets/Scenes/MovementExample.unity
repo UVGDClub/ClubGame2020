@@ -214,7 +214,6 @@ GameObject:
   - component: {fileID: 1812420086}
   - component: {fileID: 1812420085}
   - component: {fileID: 1812420089}
-  - component: {fileID: 1812420088}
   - component: {fileID: 1812420087}
   m_Layer: 0
   m_Name: Player
@@ -307,23 +306,6 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
---- !u!114 &1812420088
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1812420084}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 765c6a6a2aee38c40aed2b1b17958671, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  joystickAlias:
-  - {fileID: 11400000, guid: bb927c0f667c88b40a6283998e79110d, type: 2}
-  - {fileID: 11400000, guid: c7fcb4f0ad3604545877d0d52e5defea, type: 2}
-  buttonAlias: []
-  actor: {fileID: 1812420089}
 --- !u!114 &1812420089
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -339,3 +321,5 @@ MonoBehaviour:
   moveSpeed: 1
   turnSpeed: 0.5
   rb: {fileID: 1812420087}
+  controls: {fileID: -944628639613478452, guid: a59d068faf964394b90c8a687f259f84,
+    type: 3}
