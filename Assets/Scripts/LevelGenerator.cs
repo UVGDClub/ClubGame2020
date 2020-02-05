@@ -5,6 +5,9 @@ using UnityEditor;
 
 namespace LevelGeneration
 {
+    /// <summary>
+    /// Handles generating a 2d array of points that can be interpreted as passable floor tiles.
+    /// </summary>
     public class LevelGenerator : MonoBehaviour
     {
         public Vector2Int dimensions;
@@ -23,7 +26,13 @@ namespace LevelGeneration
         List<Vector2Int> cells = new List<Vector2Int>();
         public List<Region> regions = new List<Region>();
 
-        //for now just creates a 2d binary map to represent tiles being on / off
+        /// <summary>
+        /// For now just creates a 2d binary map to represent tiles being on / off
+        /// Later, we can use this map data to create the floor plane from quads and triangles
+        /// based on the layout of the map.
+        /// 
+        /// The meshRenderer is currently just placeholder to prove the concept and for testing purposes.
+        /// </summary>
         public void Generate()
         {
             cells.Clear();
@@ -54,6 +63,7 @@ namespace LevelGeneration
             }
 
             bool[] filter = new bool[9];
+
             //convolve rules over map
             for (int y = 0; y < dimensions.y; y++)
             {
@@ -85,6 +95,7 @@ namespace LevelGeneration
                         filter[8] = (x + 1 < dimensions.x) && map[x+1, y+1] == 1;
                     }
 
+                    //if we get a match, skip onto the next point after applying the rule output
                     for (int i = 0; i < cellularAutomaton.rules.Count; i++)
                     {
                         bool satisfied = true;
@@ -125,6 +136,13 @@ namespace LevelGeneration
             meshRenderer.sharedMaterial.SetTexture("_MainTex", tex);
         }
 
+        /// <summary>
+        /// Incomplete starter code. Finds regions of cells that are all connected, and creates a list of regions.
+        /// TODO: use midpoints of islands to find the closest neighbouring island, then find the closest cells
+        /// within those regions to create bridges/paths between them.
+        /// 
+        /// Cells that have been processed are marked red, and the midpoint of regions are marked green.
+        /// </summary>
         public void JoinRegions()
         {
             if (cells.Count == 0)
@@ -231,6 +249,10 @@ namespace LevelGeneration
         }
     }
 
+    /// <summary>
+    /// Stores map data into islands that can be connected.
+    /// Use midpoints to find closest islands, then search for the cells within those islands which are closest.
+    /// </summary>
     [System.Serializable]
     public class Region
     {

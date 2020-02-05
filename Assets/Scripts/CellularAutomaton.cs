@@ -14,6 +14,13 @@ namespace LevelGeneration
         public List<Rule> rules = new List<Rule>();
     }
 
+    /// <summary>
+    /// Stores the boolean condition to compare against a map-cell neighbourhood
+    /// the condition is a flattened representation of a 3x3 matrix (to allow proper serialization in Unity)
+    /// The centre of the matrix is condition[4] (think of condition[1,1] in matrix form).
+    /// If the truth value (true = 1, false = 0) matches the value in the map, we say the condition
+    /// is satisfied, and the center point we are convolving around is set to the value of the output.
+    /// </summary>
     [System.Serializable]
     public class Rule
     {
@@ -22,6 +29,9 @@ namespace LevelGeneration
         public bool output;
     }
 
+    /// <summary>
+    /// Overrides the default inspector to present the rules of the automaton in a 3x3 grid.
+    /// </summary>
     [CustomEditor(typeof(CellularAutomaton))]
     public class Editor_CellularAutomaton : Editor
     {
