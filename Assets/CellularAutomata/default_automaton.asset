@@ -1,0 +1,45 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c618bae44ec9d7d4cb3bce76914df850, type: 3}
+  m_Name: default_automaton
+  m_EditorClassIdentifier: 
+  mapRules:
+  - foldedOut: 0
+    condition: {fileID: 11400000, guid: 4e7cbaef65b50c745b30b17a879d78f2, type: 2}
+    output: 0
+  - foldedOut: 0
+    condition: {fileID: 11400000, guid: 8d75387b74915f34ea8f93f464b81989, type: 2}
+    output: 0
+  - foldedOut: 0
+    condition: {fileID: 11400000, guid: db13513ce5fda1f47a33693927ea8078, type: 2}
+    output: 0
+  - foldedOut: 0
+    condition: {fileID: 11400000, guid: 10d6cdfe720b0b94db3ae1c83e9b4851, type: 2}
+    output: 0
+  tileRules:
+  - foldedOut: 1
+    condition: {fileID: 11400000, guid: 4e7cbaef65b50c745b30b17a879d78f2, type: 2}
+    verts:
+    - {x: 0.5, y: 0, z: -0.5}
+    - {x: 0.5, y: 0, z: 0.5}
+    - {x: -0.5, y: 0, z: 0.5}
+    tris: fdfffffffffffffffeffffff
+  - foldedOut: 1
+    condition: {fileID: 11400000, guid: 61c72e5624c4d2843b7dd3a455fa4a53, type: 2}
+    verts:
+    - {x: 0.5, y: 0, z: 0.5}
+    - {x: -0.5, y: 0, z: -0.5}
+    - {x: -0.5, y: 0, z: 0.5}
+    - {x: 0, y: 0, z: 0}
+    tris: fcfffffffdfffffffefffffffcfffffffeffffffffffffff
+  mapFoldout: 0
+  tileFoldout: 1
