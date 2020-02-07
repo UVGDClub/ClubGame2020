@@ -16,6 +16,8 @@ namespace LevelGeneration
 
         public bool mapFoldout;
         public bool tileFoldout;
+
+        public string tileRulePath = "";
     }
 
     /// <summary>
@@ -66,7 +68,7 @@ namespace LevelGeneration
 
                 for (int i = 0; i < Target.mapRules.Count; i++)
                 {
-                    Target.mapRules[i].foldedOut 
+                    Target.mapRules[i].foldedOut
                         = EditorGUILayout.Foldout(Target.mapRules[i].foldedOut, "Map Rule " + i, true);
                     if (Target.mapRules[i].foldedOut)
                     {
@@ -81,14 +83,14 @@ namespace LevelGeneration
                         Target.mapRules[i].condition = (CellCondition)EditorGUILayout.ObjectField(
                                                          Target.mapRules[i].condition, typeof(CellCondition), false);
 
-                        if(Target.mapRules[i].condition)
+                        if (Target.mapRules[i].condition)
                         {
                             Vector2Int size = Target.mapRules[i].condition.size;
 
-                            for(int y = 0; y < size.y; y++)
+                            for (int y = 0; y < size.y; y++)
                             {
                                 EditorGUILayout.BeginHorizontal();
-                                for(int x = 0; x < size.x; x++)
+                                for (int x = 0; x < size.x; x++)
                                 {
                                     int index = y * size.x + x;
                                     EditorGUILayout.Toggle(Target.mapRules[i].condition.condition[index]);
@@ -110,7 +112,139 @@ namespace LevelGeneration
             if (Target.tileFoldout)
             {
                 EditorGUILayout.LabelField("Tris count back from the length of the vertex array" +
-                                            "\nand should be added clockwise.", GUILayout.MinHeight(30));
+                                            "\nand should be added clockwise. 'Add' presets are exterior to the current cell.", GUILayout.MinHeight(30));
+
+                if (Target.tileRulePath.Length == 0)
+                    Target.tileRulePath = AssetDatabase.GetAssetPath(target);
+
+                Target.tileRulePath = EditorGUILayout.TextField("Tile Rule Condition Path", Target.tileRulePath);
+
+                GUI.color = Color.red;
+                if (GUILayout.Button("Clear all tiles rules"))
+                    Target.tileRules.Clear();
+
+                GUI.color = Color.white;
+
+                if (GUILayout.Button("Add tile rule for each condition with centre == true"))
+                {
+                    //for testing >> this passed the test :)
+                    //List<int> layoutIDs = new List<int>();
+
+                    List<CellCondition> cc = new List<CellCondition>();
+                    string[] files = System.IO.Directory.GetFiles(Target.tileRulePath);
+                    foreach (string file in files)
+                    {
+                        if (file.EndsWith(".meta"))
+                            continue;
+
+                        string name = System.IO.Path.GetFileName(file);
+
+                        cc.Add(AssetDatabase.LoadAssetAtPath<CellCondition>(Target.tileRulePath + name));
+
+                        int id = cc[cc.Count - 1].Get3x3AsInt();
+                        /*if (layoutIDs.Contains(id))
+                        {
+                            Debug.LogError(id + " >> IDs are not unique!");
+                        }
+                        else
+                            layoutIDs.Add(id);*/
+                    }
+
+                    Debug.Log(cc.Count);
+
+                    for (int i = 0; i < cc.Count && cc[i] != null;)
+                    {
+                        int middle = (cc[i].size.x * cc[i].size.y - 1) / 2;
+                        if (!cc[i].condition[middle])
+                        {
+                            i++;
+                            continue;
+                        }
+
+                        bool found = false;
+                        for (int k = 0; k < Target.tileRules.Count; k++)
+                        {
+                            if (cc[i] == Target.tileRules[k].condition)
+                            {
+                                found = true;
+                                i++;
+                                break;
+                            }
+                        }
+
+                        if (found == false)
+                        {
+                            TileRule t = new TileRule();
+                            t.condition = cc[i];
+
+                            if (cc[i].condition.Length == 9)
+                            {
+                                int counter = 0;
+                                if (t.condition.condition[1])
+                                    counter++;
+                                if (t.condition.condition[3])
+                                    counter++;
+                                if (t.condition.condition[5])
+                                    counter++;
+                                if (t.condition.condition[7])
+                                    counter++;
+
+                                if (counter == 1 && !t.condition.condition[0] && !t.condition.condition[2]
+                                    && !t.condition.condition[6] && !t.condition.condition[8])
+                                {
+                                    if (t.condition.condition[1])
+                                        UseBottomQuarterTri(t);
+                                    else if (t.condition.condition[3])
+                                        UseLeftQuarterTri(t);
+                                    else if (t.condition.condition[5])
+                                        UseRightQuarterTri(t);
+                                    else if (t.condition.condition[7])
+                                        UseTopQuarterTri(t);
+
+                                }
+                                else
+                                {
+                                    int id = t.condition.Get3x3AsInt();
+                                    if (id == 10)
+                                        UseTopLeftTri(t);
+                                    else if (id == 34)
+                                        UseTopRightTri(t);
+                                    else if (id == 136)
+                                        UseBottomLeftTri(t);
+                                    else if (id == 160)
+                                        UseBottomRightTri(t);
+                                    else
+                                    {
+                                        UseDefaultSquare(t);
+
+                                        if (!t.condition.condition[1]
+                                                && (t.condition.condition[0] || t.condition.condition[2]))
+                                        { AddTopQuarterTile(t); }
+
+                                        if (!t.condition.condition[3]
+                                            && (t.condition.condition[0] || t.condition.condition[6]))
+                                        { AddLeftQuarterTile(t); }
+
+                                        if (!t.condition.condition[5]
+                                            && (t.condition.condition[2] || t.condition.condition[8]))
+                                        { AddRightQuarterTile(t); }
+
+                                        if (!t.condition.condition[7]
+                                            && (t.condition.condition[6] || t.condition.condition[8]))
+                                        { AddBottomQuarterTile(t); }
+                                    }
+                                }
+                            }
+                            else
+                                UseDefaultSquare(t);
+
+                            Target.tileRules.Add(t);
+                            i++;
+                        }
+                    }
+                }
+
+                EditorGUILayout.Separator();
 
                 if (GUILayout.Button("Add tile rule"))
                 {
@@ -119,7 +253,7 @@ namespace LevelGeneration
 
                 for (int i = 0; i < Target.tileRules.Count; i++)
                 {
-                    Target.tileRules[i].foldedOut 
+                    Target.tileRules[i].foldedOut
                         = EditorGUILayout.Foldout(Target.tileRules[i].foldedOut, "Tile Rule " + i, true);
                     if (Target.tileRules[i].foldedOut)
                     {
@@ -151,88 +285,136 @@ namespace LevelGeneration
 
                             EditorUtility.SetDirty(Target.tileRules[i].condition);
                         }
-                        
+
                         EditorGUILayout.Space();
                         if (GUILayout.Button("Use default square"))
                         {
-                            Target.tileRules[i].verts = new Vector3[4];
+                            UseDefaultSquare(Target.tileRules[i]);
+                        }
+                        EditorGUILayout.BeginHorizontal();
+                        if (GUILayout.Button("Use top-left tri"))
+                        {
+                            UseTopLeftTri(Target.tileRules[i]);
+                        }
 
-                            Target.tileRules[i].verts[0] = new Vector3(0.5f, 0, -0.5f);
-                            Target.tileRules[i].verts[1] = new Vector3(-0.5f, 0, -0.5f);
-                            Target.tileRules[i].verts[2] = new Vector3(-0.5f, 0, 0.5f);
-                            Target.tileRules[i].verts[0] = new Vector3(0.5f, 0, 0.5f);
+                        if (GUILayout.Button("Use top-right tri"))
+                        {
+                            UseTopRightTri(Target.tileRules[i]);
+                        }
 
-                            Target.tileRules[i].tris = new int[6];
-                            Target.tileRules[i].tris[0] = -4;
-                            Target.tileRules[i].tris[1] = -3;
-                            Target.tileRules[i].tris[2] = -2;
+                        if (GUILayout.Button("Use bottom-left tri"))
+                        {
+                            UseBottomLeftTri(Target.tileRules[i]);
+                        }
 
-                            Target.tileRules[i].tris[3] = -4;
-                            Target.tileRules[i].tris[4] = -2;
-                            Target.tileRules[i].tris[5] = -1;
+                        if (GUILayout.Button("Use bottom-right tri"))
+                        {
+                            UseBottomRightTri(Target.tileRules[i]);
+                        }
+                        EditorGUILayout.EndHorizontal();
+
+                        EditorGUILayout.BeginHorizontal();
+                        if (GUILayout.Button("Use top quarter tri"))
+                        {
+                            UseTopQuarterTri(Target.tileRules[i]);
+                        }
+
+                        if (GUILayout.Button("Use bottom quarter tri"))
+                        {
+                            UseBottomQuarterTri(Target.tileRules[i]);
+                        }
+
+                        if (GUILayout.Button("Use left quarter tri"))
+                        {
+                            UseLeftQuarterTri(Target.tileRules[i]);
+                        }
+
+                        if (GUILayout.Button("Use right quarter tri"))
+                        {
+                            UseRightQuarterTri(Target.tileRules[i]);
+                        }
+                        EditorGUILayout.EndHorizontal();
+
+                        EditorGUILayout.Space();
+
+                        EditorGUILayout.Space();
+                        EditorGUILayout.BeginHorizontal();
+                        GUI.color = Color.yellow;
+                        if (GUILayout.Button("Add left quarter-tile"))
+                        {
+                            AddLeftQuarterTile(Target.tileRules[i]);
                         }
                         EditorGUILayout.Space();
 
+                        EditorGUILayout.Space();
+                        if (GUILayout.Button("Add top quarter-tile"))
+                        {
+                            AddTopQuarterTile(Target.tileRules[i]);
+                        }
+                        EditorGUILayout.Space();
+
+                        EditorGUILayout.Space();
+                        if (GUILayout.Button("Add right quarter-tile"))
+                        {
+                            AddRightQuarterTile(Target.tileRules[i]);
+                        }
+                        EditorGUILayout.Space();
+
+                        EditorGUILayout.Space();
+                        if (GUILayout.Button("Add bottom quarter-tile"))
+                        {
+                            AddBottomQuarterTile(Target.tileRules[i]);
+                        }
+                        GUI.color = Color.white;
+                        EditorGUILayout.EndHorizontal();
+                        EditorGUILayout.Separator();
+
                         int vertLength = Target.tileRules[i].verts.Length;
+                        int triLength = Target.tileRules[i].tris.Length;
+
                         vertLength = EditorGUILayout.IntField("Verts", vertLength);
 
                         if (vertLength == 0)
                             vertLength = 3;
 
-                        if (vertLength < Target.tileRules[i].verts.Length)
-                        {
-                            Vector3[] v = new Vector3[vertLength];
-                            for (int k = 0; k < vertLength; k++)
-                                v[k] = Target.tileRules[i].verts[k];
-
-                            Target.tileRules[i].verts = v;
-                        }
-                        else if (vertLength > Target.tileRules[i].verts.Length)
-                        {
-                            Vector3[] v = new Vector3[vertLength];
-                            for (int k = 0; k < Target.tileRules[i].verts.Length; k++)
-                                v[k] = Target.tileRules[i].verts[k];
-
-                            Target.tileRules[i].verts = v;
-                        }
+                        ResizeVerts(i, vertLength);
 
                         for (int k = 0; k < Target.tileRules[i].verts.Length; k++)
                         {
-                            Target.tileRules[i].verts[k] 
+                            Target.tileRules[i].verts[k]
                                 = EditorGUILayout.Vector3Field(k.ToString(), Target.tileRules[i].verts[k]);
 
-                            if (Target.tileRules[i].verts[k].x < -0.5f)
-                                Target.tileRules[i].verts[k] = new Vector3(-0.5f,
+                            if (Target.tileRules[i].verts[k].x < -1f)
+                                Target.tileRules[i].verts[k] = new Vector3(-1f,
                                                                            Target.tileRules[i].verts[k].y,
                                                                            Target.tileRules[i].verts[k].z);
-                            else if(Target.tileRules[i].verts[k].x > 0.5f)
-                                Target.tileRules[i].verts[k] = new Vector3(0.5f,
+                            else if (Target.tileRules[i].verts[k].x > 1f)
+                                Target.tileRules[i].verts[k] = new Vector3(1f,
                                                                            Target.tileRules[i].verts[k].y,
                                                                            Target.tileRules[i].verts[k].z);
 
-                            if (Target.tileRules[i].verts[k].y < -0.5f)
+                            if (Target.tileRules[i].verts[k].y < -1f)
                                 Target.tileRules[i].verts[k] = new Vector3(Target.tileRules[i].verts[k].x,
-                                                                           -0.5f,
+                                                                           -1f,
                                                                            Target.tileRules[i].verts[k].z);
-                            else if (Target.tileRules[i].verts[k].y > 0.5f)
+                            else if (Target.tileRules[i].verts[k].y > 1f)
                                 Target.tileRules[i].verts[k] = new Vector3(Target.tileRules[i].verts[k].x,
-                                                                           0.5f,
+                                                                           1f,
                                                                            Target.tileRules[i].verts[k].z);
 
-                            if (Target.tileRules[i].verts[k].z < -0.5f)
+                            if (Target.tileRules[i].verts[k].z < -1f)
                                 Target.tileRules[i].verts[k] = new Vector3(Target.tileRules[i].verts[k].x,
                                                                            Target.tileRules[i].verts[k].y,
-                                                                           -0.5f);
-                            else if (Target.tileRules[i].verts[k].z > 0.5f)
+                                                                           -1f);
+                            else if (Target.tileRules[i].verts[k].z > 1f)
                                 Target.tileRules[i].verts[k] = new Vector3(Target.tileRules[i].verts[k].z,
                                                                            Target.tileRules[i].verts[k].y,
-                                                                           0.5f);
+                                                                           1f);
                         }
 
                         if (vertLength == 0)
                             Target.tileRules[i].tris = new int[0];
 
-                        int triLength = Target.tileRules[i].tris.Length;
                         triLength = EditorGUILayout.IntField("Tris", triLength);
 
                         if (triLength < vertLength)
@@ -241,26 +423,11 @@ namespace LevelGeneration
                         if (triLength % 3 != 0)
                             continue;
 
-                        if (triLength < Target.tileRules[i].tris.Length)
-                        {
-                            int[] t = new int[triLength];
-                            for (int k = 0; k < triLength; k++)
-                                t[k] = Target.tileRules[i].tris[k];
-
-                            Target.tileRules[i].tris = t;
-                        }
-                        else if (triLength > Target.tileRules[i].tris.Length)
-                        {
-                            int[] t = new int[triLength];
-                            for (int k = 0; k < Target.tileRules[i].tris.Length; k++)
-                                t[k] = Target.tileRules[i].tris[k];
-
-                            Target.tileRules[i].tris = t;
-                        }
+                        ResizeTris(i, triLength);
 
                         for (int k = 0; k < Target.tileRules[i].tris.Length; k++)
                         {
-                            Target.tileRules[i].tris[k] 
+                            Target.tileRules[i].tris[k]
                                 = EditorGUILayout.IntField(k.ToString(), Target.tileRules[i].tris[k]);
 
                             if (Target.tileRules[i].tris[k] >= 0)
@@ -271,6 +438,297 @@ namespace LevelGeneration
             }
 
             EditorUtility.SetDirty(target);
+        }
+
+        public void ResizeVerts(int index, int vertLength)
+        {
+            if (vertLength < Target.tileRules[index].verts.Length)
+            {
+                Vector3[] v = new Vector3[vertLength];
+                for (int k = 0; k < vertLength; k++)
+                    v[k] = Target.tileRules[index].verts[k];
+
+                Target.tileRules[index].verts = v;
+            }
+            else if (vertLength > Target.tileRules[index].verts.Length)
+            {
+                Vector3[] v = new Vector3[vertLength];
+                for (int k = 0; k < Target.tileRules[index].verts.Length; k++)
+                    v[k] = Target.tileRules[index].verts[k];
+
+                Target.tileRules[index].verts = v;
+            }
+        }
+
+        public void ResizeVerts(TileRule t, int vertLength)
+        {
+            if (vertLength < t.verts.Length)
+            {
+                Vector3[] v = new Vector3[vertLength];
+                for (int k = 0; k < vertLength; k++)
+                    v[k] = t.verts[k];
+
+                t.verts = v;
+            }
+            else if (vertLength > t.verts.Length)
+            {
+                Vector3[] v = new Vector3[vertLength];
+                for (int k = 0; k < t.verts.Length; k++)
+                    v[k] = t.verts[k];
+
+                t.verts = v;
+            }
+        }
+
+        public void ResizeTris(int index, int triLength)
+        {
+            if (triLength < Target.tileRules[index].tris.Length)
+            {
+                int[] t = new int[triLength];
+                for (int k = 0; k < triLength; k++)
+                    t[k] = Target.tileRules[index].tris[k];
+
+                Target.tileRules[index].tris = t;
+            }
+            else if (triLength > Target.tileRules[index].tris.Length)
+            {
+                int diff = Target.tileRules[index].tris.Length - triLength;
+
+                int[] t = new int[triLength];
+                for (int k = 0; k < Target.tileRules[index].tris.Length; k++)
+                    t[k] = Target.tileRules[index].tris[k] + diff;
+
+                Target.tileRules[index].tris = t;
+            }
+        }
+
+        public void ResizeTris(TileRule t, int triLength)
+        {
+            if (triLength < t.tris.Length)
+            {
+                int[] tris = new int[triLength];
+                for (int k = 0; k < triLength; k++)
+                    tris[k] = t.tris[k];
+
+                t.tris = tris;
+            }
+            else if (triLength > t.tris.Length)
+            {
+                int diff = t.tris.Length - triLength;
+
+                int[] tris = new int[triLength];
+                for (int k = 0; k < t.tris.Length; k++)
+                    tris[k] = t.tris[k] + diff;
+
+                t.tris = tris;
+            }
+        }
+
+        public void UseDefaultSquare(TileRule t)
+        {
+            t.verts = new Vector3[4];
+
+            t.verts[0] = new Vector3(0.5f, 0, -0.5f);
+            t.verts[1] = new Vector3(-0.5f, 0, -0.5f);
+            t.verts[2] = new Vector3(-0.5f, 0, 0.5f);
+            t.verts[3] = new Vector3(0.5f, 0, 0.5f);
+
+            t.tris = new int[6];
+            t.tris[0] = -4;
+            t.tris[1] = -3;
+            t.tris[2] = -2;
+
+            t.tris[3] = -4;
+            t.tris[4] = -2;
+            t.tris[5] = -1;
+        }
+
+        /// <summary>
+        /// Tri used is interior to the cell in question
+        /// </summary>
+        /// <param name="t"></param>
+        public void UseTopQuarterTri(TileRule t)
+        {
+            t.verts = new Vector3[3];
+
+            t.verts[0] = new Vector3(0.5f, 0, 0.5f);
+            t.verts[1] = new Vector3(0, 0, 0);
+            t.verts[2] = new Vector3(-0.5f, 0, 0.5f);
+
+            t.tris = new int[3];
+            t.tris[0] = -3;
+            t.tris[1] = -2;
+            t.tris[2] = -1;
+        }
+
+        /// <summary>
+        /// Tri used is interior to the cell in question
+        /// </summary>
+        /// <param name="t"></param>
+        public void UseRightQuarterTri(TileRule t)
+        {
+            t.verts = new Vector3[3];
+
+            t.verts[0] = new Vector3(0.5f, 0, 0.5f);
+            t.verts[1] = new Vector3(0.5f, 0, -0.5f);
+            t.verts[2] = new Vector3(0, 0, 0);
+
+            t.tris = new int[3];
+            t.tris[0] = -3;
+            t.tris[1] = -2;
+            t.tris[2] = -1;
+        }
+
+        /// <summary>
+        /// Tri used is interior to the cell in question
+        /// </summary>
+        /// <param name="t"></param>
+        public void UseBottomQuarterTri(TileRule t)
+        {
+            t.verts = new Vector3[3];
+
+            t.verts[0] = new Vector3(0.5f, 0, -0.5f);
+            t.verts[1] = new Vector3(-0.5f, 0, -0.5f);
+            t.verts[2] = new Vector3(0, 0, 0);
+
+            t.tris = new int[3];
+            t.tris[0] = -3;
+            t.tris[1] = -2;
+            t.tris[2] = -1;
+        }
+
+        /// <summary>
+        /// Tri used is interior to the cell in question
+        /// </summary>
+        /// <param name="t"></param>
+        public void UseLeftQuarterTri(TileRule t)
+        {
+            t.verts = new Vector3[3];
+
+            t.verts[0] = new Vector3(0, 0, 0);
+            t.verts[1] = new Vector3(-0.5f, 0, -0.5f);
+            t.verts[2] = new Vector3(-0.5f, 0, 0.5f);
+
+            t.tris = new int[3];
+            t.tris[0] = -3;
+            t.tris[1] = -2;
+            t.tris[2] = -1;
+        }
+
+        public void UseTopLeftTri(TileRule t)
+        {
+            t.verts = new Vector3[3];
+
+            t.verts[0] = new Vector3(0.5f, 0, 0.5f);
+            t.verts[1] = new Vector3(-0.5f, 0, -0.5f);
+            t.verts[2] = new Vector3(-0.5f, 0, 0.5f);
+
+            t.tris = new int[3];
+            t.tris[0] = -3;
+            t.tris[1] = -2;
+            t.tris[2] = -1;
+        }
+
+        public void UseTopRightTri(TileRule t)
+        {
+            t.verts = new Vector3[3];
+
+            t.verts[0] = new Vector3(0.5f, 0, 0.5f);
+            t.verts[1] = new Vector3(0.5f, 0, -0.5f);
+            t.verts[2] = new Vector3(-0.5f, 0, 0.5f);
+
+            t.tris = new int[3];
+            t.tris[0] = -3;
+            t.tris[1] = -2;
+            t.tris[2] = -1;
+        }
+
+        public void UseBottomLeftTri(TileRule t)
+        {
+            t.verts = new Vector3[3];
+
+            t.verts[0] = new Vector3(0.5f, 0, 0.5f);
+            t.verts[1] = new Vector3(-0.5f, 0, -0.5f);
+            t.verts[2] = new Vector3(-0.5f, 0, 0.5f);
+
+            t.tris = new int[3];
+            t.tris[0] = -3;
+            t.tris[1] = -2;
+            t.tris[2] = -1;
+        }
+
+        public void UseBottomRightTri(TileRule t)
+        {
+            t.verts = new Vector3[3];
+
+            t.verts[0] = new Vector3(0.5f, 0, 0.5f);
+            t.verts[1] = new Vector3(0.5f, 0, -0.5f);
+            t.verts[2] = new Vector3(-0.5f, 0, -0.5f);
+
+            t.tris = new int[3];
+            t.tris[0] = -3;
+            t.tris[1] = -2;
+            t.tris[2] = -1;
+        }
+
+        public void AddLeftQuarterTile(TileRule t)
+        {
+            ResizeVerts(t, t.verts.Length + 3);
+
+            t.verts[t.verts.Length - 3] = new Vector3(-0.5f, 0, -0.5f);
+            t.verts[t.verts.Length - 2] = new Vector3(-1f, 0, 0);
+            t.verts[t.verts.Length - 1] = new Vector3(-0.5f, 0, 0.5f);
+
+            ResizeTris(t, t.tris.Length + 3);
+
+            t.tris[t.tris.Length - 3] = -3;
+            t.tris[t.tris.Length - 2] = -2;
+            t.tris[t.tris.Length - 1] = -1;
+        }
+
+        public void AddRightQuarterTile(TileRule t)
+        {
+            ResizeVerts(t, t.verts.Length + 3);
+
+            t.verts[t.verts.Length - 3] = new Vector3(1f, 0, 0);
+            t.verts[t.verts.Length - 2] = new Vector3(0.5f, 0, -0.5f);
+            t.verts[t.verts.Length - 1] = new Vector3(0.5f, 0, 0.5f);
+
+            ResizeTris(t, t.tris.Length + 3);
+
+            t.tris[t.tris.Length - 3] = -3;
+            t.tris[t.tris.Length - 2] = -2;
+            t.tris[t.tris.Length - 1] = -1;
+        }
+
+        public void AddTopQuarterTile(TileRule t)
+        {
+            ResizeVerts(t, t.verts.Length + 3);
+
+            t.verts[t.verts.Length - 3] = new Vector3(0.5f, 0, -0.5f);
+            t.verts[t.verts.Length - 2] = new Vector3(0, 0, -1f);
+            t.verts[t.verts.Length - 1] = new Vector3(-0.5f, 0, -0.5f);
+
+            ResizeTris(t, t.tris.Length + 3);
+
+            t.tris[t.tris.Length - 3] = -3;
+            t.tris[t.tris.Length - 2] = -2;
+            t.tris[t.tris.Length - 1] = -1;
+        }
+
+        public void AddBottomQuarterTile(TileRule t)
+        {
+            ResizeVerts(t, t.verts.Length + 3);
+
+            t.verts[t.verts.Length - 3] = new Vector3(0.5f, 0, 0.5f);
+            t.verts[t.verts.Length - 2] = new Vector3(-0.5f, 0, 0.5f);
+            t.verts[t.verts.Length - 1] = new Vector3(0, 0, 1f);
+
+            ResizeTris(t, t.tris.Length + 3);
+
+            t.tris[t.tris.Length - 3] = -3;
+            t.tris[t.tris.Length - 2] = -2;
+            t.tris[t.tris.Length - 1] = -1;
         }
     }
 

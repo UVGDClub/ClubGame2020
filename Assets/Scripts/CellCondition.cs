@@ -8,12 +8,29 @@ namespace LevelGeneration
     /// <summary>
     /// Stores the boolean condition to compare against a map-cell neighbourhood
     /// the condition is a flattened representation of a 2d array (to allow proper serialization in Unity)
+    /// 
+    /// Currently only 3x3 grids are supported by the level generator.
     /// </summary>
     [CreateAssetMenu(fileName = "new Cell Condition", menuName = "Level Generation/Cell Condition")]
     public class CellCondition : ScriptableObject
     {
         public Vector2Int size = new Vector2Int(3, 3);
         public bool[] condition = new bool[9];
+
+        public int Get3x3AsInt()
+        {
+            if (size.x != 3 || size.y != 3)
+                return 0;
+
+            int id = 0;
+            for (int i = 0; i < size.x * size.y; i++)
+            {
+                int val = (int)(condition[i] == true ? 1 : 0);
+                id += val << i;
+            }
+
+            return id;
+        }
     }
 
     [CustomEditor(typeof(CellCondition))]
@@ -29,6 +46,11 @@ namespace LevelGeneration
             {
                 Generate3x3Grid();
             }*/
+
+            if(GUILayout.Button("Log int id for this layout"))
+            {
+                Debug.Log(Target.Get3x3AsInt());
+            }
 
             Vector2Int size = EditorGUILayout.Vector2IntField("Dimensions", Target.size);
             if (size.x <= 0 || size.y <= 0 || size.x % 2 != 1 || size.y % 2 != 1)
@@ -91,6 +113,5 @@ namespace LevelGeneration
             }
 
         }
-
     }
 }

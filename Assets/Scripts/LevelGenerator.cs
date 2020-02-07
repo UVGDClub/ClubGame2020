@@ -7,6 +7,13 @@ namespace LevelGeneration
 {
     /// <summary>
     /// Handles generating a 2d array of points that can be interpreted as passable floor tiles.
+    /// 
+    /// Currently only supports 3x3 cellular automata rules.
+    /// 
+    /// TODO:
+    /// Look at storing the 3x3 grid ids of cells in the map when we resolve regions.
+    /// Then when we just need to update cells when we add paths between regions
+    /// and look at each cell in the map only once to generate the map.
     /// </summary>
     public class LevelGenerator : MonoBehaviour
     {
@@ -23,11 +30,11 @@ namespace LevelGeneration
 
         public int minRegionSize = 5;
 
-        int[,] map;
+        public int[,] map;
         List<Region> regions = new List<Region>();
         List<Vector2Int> cells = new List<Vector2Int>();
 
-        Texture2D tex;
+        [HideInInspector] public Texture2D tex;
 
         /// <summary>
         /// For now just creates a 2d binary map to represent tiles being on / off
@@ -344,13 +351,15 @@ namespace LevelGeneration
                     int steps = Mathf.Abs(dir.x) > Mathf.Abs(dir.y) ?
                                 Mathf.Abs((int)dir.x) : Mathf.Abs((int)dir.y);
                     dir = dir.normalized;
-                    //Vector2Int cur = a;
                     float x = 0; float y = 0;
 
                     for (int q = 0; q <= steps; q++)
                     {
-                        x += dir.x;
-                        y += dir.y;
+                        if(x + dir.x < dimensions.x)
+                            x += dir.x;
+    
+                        if(y + dir.y < dimensions.y)
+                            y += dir.y;
 
                         int _x = a.x + Mathf.RoundToInt(x);
                         int _y = a.y + Mathf.RoundToInt(y);
@@ -383,9 +392,29 @@ namespace LevelGeneration
             {
                 for (int x = 0; x < dimensions.x; x++)
                 {
+                    //can speed this up a lot if we restrict the condition dimensions
+                    Vector2Int size = cellularAutomaton.tileRules[0].condition.size;
+                    Vector2Int edge = new Vector2Int((size.x - 1) / 2, (size.y - 1) / 2);
+                    bool[] filter = new bool[size.x * size.y];
+
+                    for (int yf = 0; yf < size.y; yf++)
+                    {
+                        for (int xf = 0; xf < size.x; xf++)
+                        {
+                            Vector2Int cur = new Vector2Int(x + xf - edge.x, y + yf - edge.y);
+
+                            if (cur.x < 0 || cur.x >= dimensions.x || cur.y < 0 || cur.y >= dimensions.y)
+                                filter[yf * size.x + xf] = false;
+                            else
+                                filter[yf * size.x + xf] = map[cur.x, cur.y] == 1;
+                        }
+                    }
+
                     bool satisfied = true;
                     for (int i = 0; i < cellularAutomaton.tileRules.Count; i++)
                     {
+                        /* more modular, but waaay slower; for now, we won't support filters that aren't 3x3
+                        
                         Vector2Int size = cellularAutomaton.tileRules[i].condition.size;
                         Vector2Int edge = new Vector2Int((size.x - 1) / 2, (size.y - 1) / 2);
                         bool[] filter = new bool[size.x * size.y];
@@ -400,8 +429,11 @@ namespace LevelGeneration
                                     filter[yf * size.x + xf] = false;
                                 else
                                     filter[yf * size.x + xf] = map[cur.x, cur.y] == 1;
+
+                                //testing
+                                Debug.Log((yf * size.x + xf) + " : " + filter[yf * size.x + xf]);
                             }
-                        }
+                        }*/
 
                         //if we get a match, skip onto the next point after applying the rule output
                         for (int k = 0; k < filter.Length; k++)
@@ -415,6 +447,8 @@ namespace LevelGeneration
 
                         if (satisfied)
                         {
+                            //Debug.Log("x " + x + " y " + y + " | Satisfied by rule " + i);
+
                             //add verts / tris
                             Vector3 pos = new Vector3(x, 0, y);
                             for (int v = 0; v < cellularAutomaton.tileRules[i].verts.Length; v++)
@@ -429,6 +463,8 @@ namespace LevelGeneration
 
                             break;
                         }
+                        else if (i < cellularAutomaton.tileRules.Count - 1)
+                            satisfied = true;
                     }
                     //default to a basic square if no rule satisfies and the tile is present.
                     if (!satisfied && map[x, y] == 1)
@@ -464,6 +500,18 @@ namespace LevelGeneration
             Debug.Log("Mesh generated with " + verts.Count + " verts and " + tris.Count + " tris");
 
             meshFilter.mesh = m;
+        }
+
+        /// <summary>
+        /// TODO: 
+        /// Look at regions, if the cells.count is > some threshold, use a filter to spawn enemies,
+        /// the filter will make sure that enemy spawns aren't too dense
+        /// this could be adjusted for difficulty as the game progresses.
+        /// 
+        /// Spawn a boss mob in the largest region.
+        /// </summary>
+        public void GenerateMobs()
+        {
         }
     }
 
