@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8542aec37296b3440a9c3d1be7f40fe7, type: 3}
   m_Name: TestAtlas
   m_EditorClassIdentifier: 
-  previewMaterial: {fileID: 0}
+  previewMaterial: {fileID: 2100000, guid: a0f2d223ba2ac0a4da42fa66babeffaa, type: 2}
   overlayMaterial: {fileID: 2100000, guid: cb592e1d6e9807248b7b8687ace8dbb9, type: 2}
   atlas: {fileID: 2800000, guid: 44334a5400f680f4bb3372642959e003, type: 3}
   tileSets:

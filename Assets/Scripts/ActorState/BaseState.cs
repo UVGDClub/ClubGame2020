@@ -8,7 +8,6 @@ namespace StateMachine
 {
     public abstract class BaseState : ScriptableObject
     {
-        public InputAction[] transitionAction;
         public virtual void OnEnter(Enemy enemy)
         {
             throw new NotImplementedException();
