@@ -23,6 +23,9 @@ public class MainMenu : MonoBehaviour
 
         // TODO: link this button with the gameloop scene once it is established.
         //SceneManager.LoadScene("Gameloop");
+		
+		//temporary scene:
+		SceneManager.LoadScene("WorldTest1");
     }
 
     public void AboutButton()
