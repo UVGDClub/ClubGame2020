@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: default_automaton
   m_EditorClassIdentifier: 
   mapRules:
-  - foldedOut: 1
+  - foldedOut: 0
     condition: {fileID: 11400000, guid: 4e7cbaef65b50c745b30b17a879d78f2, type: 2}
     output: 0
   - foldedOut: 1
@@ -26,7 +26,7 @@ MonoBehaviour:
     condition: {fileID: 11400000, guid: 10d6cdfe720b0b94db3ae1c83e9b4851, type: 2}
     output: 0
   tileRules:
-  - foldedOut: 0
+  - foldedOut: 1
     condition: {fileID: 11400000, guid: 01f5eb0047845d44d9f2ce15a5db936d, type: 2}
     verts:
     - {x: 0.5, y: 0, z: -0.5}
@@ -39,6 +39,7 @@ MonoBehaviour:
     - {x: 0.5, y: 0, z: 0.5}
     - {x: -0.5, y: 0, z: 0.5}
     - {x: 0, y: 0, z: 1}
+    uvs: []
     tris: f6fffffff7fffffff8fffffff6fffffff8fffffff9fffffffafffffffbfffffffcfffffffdfffffffeffffffffffffff
   - foldedOut: 0
     condition: {fileID: 11400000, guid: 158112b6c2eda8a488402b65766a687a, type: 2}
@@ -56,6 +57,7 @@ MonoBehaviour:
     - {x: 0.5, y: 0, z: 0.5}
     - {x: -0.5, y: 0, z: 0.5}
     - {x: 0, y: 0, z: 1}
+    uvs: []
     tris: f3fffffff4fffffff5fffffff3fffffff5fffffff6fffffff7fffffff8fffffff9fffffffafffffffbfffffffcfffffffdfffffffeffffffffffffff
   - foldedOut: 0
     condition: {fileID: 11400000, guid: d1cde0ab92a3cd1458f7f6793af6f197, type: 2}
@@ -70,6 +72,7 @@ MonoBehaviour:
     - {x: 0.5, y: 0, z: 0.5}
     - {x: -0.5, y: 0, z: 0.5}
     - {x: 0, y: 0, z: 1}
+    uvs: []
     tris: f6fffffff7fffffff8fffffff6fffffff8fffffff9fffffffafffffffbfffffffcfffffffdfffffffeffffffffffffff
   - foldedOut: 0
     condition: {fileID: 11400000, guid: 1fc55a2a89dfba54493d816b5f4bae88, type: 2}
@@ -84,6 +87,7 @@ MonoBehaviour:
     - {x: 0.5, y: 0, z: 0.5}
     - {x: -0.5, y: 0, z: 0.5}
     - {x: 0, y: 0, z: 1}
+    uvs: []
     tris: f6fffffff7fffffff8fffffff6fffffff8fffffff9fffffffafffffffbfffffffcfffffffdfffffffeffffffffffffff
   - foldedOut: 0
     condition: {fileID: 11400000, guid: e85dfdefeacf793429c63e70a135a2d8, type: 2}
@@ -101,6 +105,7 @@ MonoBehaviour:
     - {x: 0.5, y: 0, z: 0.5}
     - {x: -0.5, y: 0, z: 0.5}
     - {x: 0, y: 0, z: 1}
+    uvs: []
     tris: f3fffffff4fffffff5fffffff3fffffff5fffffff6fffffff7fffffff8fffffff9fffffffafffffffbfffffffcfffffffdfffffffeffffffffffffff
   - foldedOut: 0
     condition: {fileID: 11400000, guid: d7339eb9aff22a840a7e621a15b2d9b9, type: 2}
@@ -118,6 +123,7 @@ MonoBehaviour:
     - {x: 0.5, y: 0, z: 0.5}
     - {x: -0.5, y: 0, z: 0.5}
     - {x: 0, y: 0, z: 1}
+    uvs: []
     tris: f3fffffff4fffffff5fffffff3fffffff5fffffff6fffffff7fffffff8fffffff9fffffffafffffffbfffffffcfffffffdfffffffeffffffffffffff
   - foldedOut: 0
     condition: {fileID: 11400000, guid: 33cbbd09f14d72e49a069189a6d07a0f, type: 2}
@@ -132,6 +138,7 @@ MonoBehaviour:
     - {x: 0.5, y: 0, z: 0.5}
     - {x: -0.5, y: 0, z: 0.5}
     - {x: 0, y: 0, z: 1}
+    uvs: []
     tris: f6fffffff7fffffff8fffffff6fffffff8fffffff9fffffffafffffffbfffffffcfffffffdfffffffeffffffffffffff
   - foldedOut: 0
     condition: {fileID: 11400000, guid: cb02484e61b094c49bfec6d2c269b961, type: 2}
@@ -146,6 +153,7 @@ MonoBehaviour:
     - {x: 0.5, y: 0, z: 0.5}
     - {x: -0.5, y: 0, z: 0.5}
     - {x: 0, y: 0, z: 1}
+    uvs: []
     tris: f6fffffff7fffffff8fffffff6fffffff8fffffff9fffffffafffffffbfffffffcfffffffdfffffffeffffffffffffff
   - foldedOut: 0
     condition: {fileID: 11400000, guid: f630fcd58e8b68944b27788694cd7278, type: 2}
@@ -157,6 +165,7 @@ MonoBehaviour:
     - {x: 0.5, y: 0, z: 0.5}
     - {x: -0.5, y: 0, z: 0.5}
     - {x: 0, y: 0, z: 1}
+    uvs: []
     tris: f9fffffffafffffffbfffffff9fffffffbfffffffcfffffffdfffffffeffffffffffffff
   - foldedOut: 0
     condition: {fileID: 11400000, guid: bd17c649831cd574896f23587a18988d, type: 2}
@@ -171,6 +180,7 @@ MonoBehaviour:
     - {x: 0.5, y: 0, z: 0.5}
     - {x: -0.5, y: 0, z: 0.5}
     - {x: 0, y: 0, z: 1}
+    uvs: []
     tris: f6fffffff7fffffff8fffffff6fffffff8fffffff9fffffffafffffffbfffffffcfffffffdfffffffeffffffffffffff
   - foldedOut: 0
     condition: {fileID: 11400000, guid: 9237cf8ba07f3784d89ac52d69731597, type: 2}
@@ -182,6 +192,7 @@ MonoBehaviour:
     - {x: 0.5, y: 0, z: 0.5}
     - {x: -0.5, y: 0, z: 0.5}
     - {x: 0, y: 0, z: 1}
+    uvs: []
     tris: f9fffffffafffffffbfffffff9fffffffbfffffffcfffffffdfffffffeffffffffffffff
   - foldedOut: 0
     condition: {fileID: 11400000, guid: d60bb6bd73915de408df13b936bc3a54, type: 2}
@@ -193,6 +204,7 @@ MonoBehaviour:
     - {x: 0.5, y: 0, z: 0.5}
     - {x: -0.5, y: 0, z: 0.5}
     - {x: 0, y: 0, z: 1}
+    uvs: []
     tris: f9fffffffafffffffbfffffff9fffffffbfffffffcfffffffdfffffffeffffffffffffff
   - foldedOut: 0
     condition: {fileID: 11400000, guid: 12d99bbefc111e24a8004f78b002559a, type: 2}
@@ -207,6 +219,7 @@ MonoBehaviour:
     - {x: 0.5, y: 0, z: 0.5}
     - {x: -0.5, y: 0, z: 0.5}
     - {x: 0, y: 0, z: 1}
+    uvs: []
     tris: f6fffffff7fffffff8fffffff6fffffff8fffffff9fffffffafffffffbfffffffcfffffffdfffffffeffffffffffffff
   - foldedOut: 0
     condition: {fileID: 11400000, guid: 854468c8b8e24c14e8a60b7068957358, type: 2}
@@ -221,6 +234,7 @@ MonoBehaviour:
     - {x: 0.5, y: 0, z: 0.5}
     - {x: -0.5, y: 0, z: 0.5}
     - {x: 0, y: 0, z: 1}
+    uvs: []
     tris: f6fffffff7fffffff8fffffff6fffffff8fffffff9fffffffafffffffbfffffffcfffffffdfffffffeffffffffffffff
   - foldedOut: 0
     condition: {fileID: 11400000, guid: c57687725e0346341952b06066e99709, type: 2}
@@ -232,6 +246,7 @@ MonoBehaviour:
     - {x: 0.5, y: 0, z: 0.5}
     - {x: -0.5, y: 0, z: 0.5}
     - {x: 0, y: 0, z: 1}
+    uvs: []
     tris: f9fffffffafffffffbfffffff9fffffffbfffffffcfffffffdfffffffeffffffffffffff
   - foldedOut: 0
     condition: {fileID: 11400000, guid: bbc24db2554dbfb4582c0547d8c38bb9, type: 2}
@@ -243,6 +258,7 @@ MonoBehaviour:
     - {x: 0.5, y: 0, z: 0.5}
     - {x: -0.5, y: 0, z: 0.5}
     - {x: 0, y: 0, z: 1}
+    uvs: []
     tris: f9fffffffafffffffbfffffff9fffffffbfffffffcfffffffdfffffffeffffffffffffff
   - foldedOut: 0
     condition: {fileID: 11400000, guid: d57356db7d1969d4c87489b773b2f5c9, type: 2}
@@ -250,6 +266,7 @@ MonoBehaviour:
     - {x: 0.5, y: 0, z: 0.5}
     - {x: 0, y: 0, z: 0}
     - {x: -0.5, y: 0, z: 0.5}
+    uvs: []
     tris: fdfffffffeffffffffffffff
   - foldedOut: 0
     condition: {fileID: 11400000, guid: cd1d34b4f610de241bfa54ed205a28f2, type: 2}
@@ -264,6 +281,7 @@ MonoBehaviour:
     - {x: -0.5, y: 0, z: -0.5}
     - {x: -1, y: 0, z: 0}
     - {x: -0.5, y: 0, z: 0.5}
+    uvs: []
     tris: f6fffffff7fffffff8fffffff6fffffff8fffffff9fffffffafffffffbfffffffcfffffffdfffffffeffffffffffffff
   - foldedOut: 0
     condition: {fileID: 11400000, guid: 667a1705f0e2e9b40a3d75be698973d1, type: 2}
@@ -272,6 +290,7 @@ MonoBehaviour:
     - {x: -0.5, y: 0, z: -0.5}
     - {x: -0.5, y: 0, z: 0.5}
     - {x: 0.5, y: 0, z: 0.5}
+    uvs: []
     tris: fcfffffffdfffffffefffffffcfffffffeffffffffffffff
   - foldedOut: 0
     condition: {fileID: 11400000, guid: f9cc9d4c7832e21499af73d360035e53, type: 2}
@@ -283,6 +302,7 @@ MonoBehaviour:
     - {x: -0.5, y: 0, z: -0.5}
     - {x: -1, y: 0, z: 0}
     - {x: -0.5, y: 0, z: 0.5}
+    uvs: []
     tris: f9fffffffafffffffbfffffff9fffffffbfffffffcfffffffdfffffffeffffffffffffff
   - foldedOut: 0
     condition: {fileID: 11400000, guid: 630d1ade7a7f75b489a5ac49eb138a43, type: 2}
@@ -297,6 +317,7 @@ MonoBehaviour:
     - {x: 1, y: 0, z: 0}
     - {x: 0.5, y: 0, z: -0.5}
     - {x: 0.5, y: 0, z: 0.5}
+    uvs: []
     tris: f6fffffff7fffffff8fffffff6fffffff8fffffff9fffffffafffffffbfffffffcfffffffdfffffffeffffffffffffff
   - foldedOut: 0
     condition: {fileID: 11400000, guid: 8ca8c2a0a30b4f942ad97c9900d43870, type: 2}
@@ -314,6 +335,7 @@ MonoBehaviour:
     - {x: 1, y: 0, z: 0}
     - {x: 0.5, y: 0, z: -0.5}
     - {x: 0.5, y: 0, z: 0.5}
+    uvs: []
     tris: f3fffffff4fffffff5fffffff3fffffff5fffffff6fffffff7fffffff8fffffff9fffffffafffffffbfffffffcfffffffdfffffffeffffffffffffff
   - foldedOut: 0
     condition: {fileID: 11400000, guid: 1c2afe650b27b5449be602e55b72c481, type: 2}
@@ -325,6 +347,7 @@ MonoBehaviour:
     - {x: 1, y: 0, z: 0}
     - {x: 0.5, y: 0, z: -0.5}
     - {x: 0.5, y: 0, z: 0.5}
+    uvs: []
     tris: f9fffffffafffffffbfffffff9fffffffbfffffffcfffffffdfffffffeffffffffffffff
   - foldedOut: 0
     condition: {fileID: 11400000, guid: 70535ecdea08c914e84fdbeffbefe9a6, type: 2}
@@ -339,6 +362,7 @@ MonoBehaviour:
     - {x: 1, y: 0, z: 0}
     - {x: 0.5, y: 0, z: -0.5}
     - {x: 0.5, y: 0, z: 0.5}
+    uvs: []
     tris: f6fffffff7fffffff8fffffff6fffffff8fffffff9fffffffafffffffbfffffffcfffffffdfffffffeffffffffffffff
   - foldedOut: 0
     condition: {fileID: 11400000, guid: 46256c535b216ae42876416f21442e86, type: 2}
@@ -347,6 +371,7 @@ MonoBehaviour:
     - {x: -0.5, y: 0, z: -0.5}
     - {x: -0.5, y: 0, z: 0.5}
     - {x: 0.5, y: 0, z: 0.5}
+    uvs: []
     tris: fcfffffffdfffffffefffffffcfffffffeffffffffffffff
   - foldedOut: 0
     condition: {fileID: 11400000, guid: 75ecbf6dcc440ad43bc686300db0507d, type: 2}
@@ -358,6 +383,7 @@ MonoBehaviour:
     - {x: 0.5, y: 0, z: -0.5}
     - {x: 0, y: 0, z: -1}
     - {x: -0.5, y: 0, z: -0.5}
+    uvs: []
     tris: f9fffffffafffffffbfffffff9fffffffbfffffffcfffffffdfffffffeffffffffffffff
   - foldedOut: 0
     condition: {fileID: 11400000, guid: 05a96b49cbae7c0479a67d21178e411c, type: 2}
@@ -366,6 +392,7 @@ MonoBehaviour:
     - {x: -0.5, y: 0, z: -0.5}
     - {x: -0.5, y: 0, z: 0.5}
     - {x: 0.5, y: 0, z: 0.5}
+    uvs: []
     tris: fcfffffffdfffffffefffffffcfffffffeffffffffffffff
   - foldedOut: 0
     condition: {fileID: 11400000, guid: 5ed18806952150947895c6b642e866eb, type: 2}
@@ -374,6 +401,7 @@ MonoBehaviour:
     - {x: -0.5, y: 0, z: -0.5}
     - {x: -0.5, y: 0, z: 0.5}
     - {x: 0.5, y: 0, z: 0.5}
+    uvs: []
     tris: fcfffffffdfffffffefffffffcfffffffeffffffffffffff
   - foldedOut: 0
     condition: {fileID: 11400000, guid: f5711664b8da7e844bd4a67382083c1a, type: 2}
@@ -388,6 +416,7 @@ MonoBehaviour:
     - {x: 1, y: 0, z: 0}
     - {x: 0.5, y: 0, z: -0.5}
     - {x: 0.5, y: 0, z: 0.5}
+    uvs: []
     tris: f6fffffff7fffffff8fffffff6fffffff8fffffff9fffffffafffffffbfffffffcfffffffdfffffffeffffffffffffff
   - foldedOut: 0
     condition: {fileID: 11400000, guid: 7c70f5317853d4f43bf91c3744a64135, type: 2}
@@ -402,6 +431,7 @@ MonoBehaviour:
     - {x: 1, y: 0, z: 0}
     - {x: 0.5, y: 0, z: -0.5}
     - {x: 0.5, y: 0, z: 0.5}
+    uvs: []
     tris: f6fffffff7fffffff8fffffff6fffffff8fffffff9fffffffafffffffbfffffffcfffffffdfffffffeffffffffffffff
   - foldedOut: 0
     condition: {fileID: 11400000, guid: eda3912b8e3ea2a49ab454e6c04b5ab8, type: 2}
@@ -413,6 +443,7 @@ MonoBehaviour:
     - {x: 1, y: 0, z: 0}
     - {x: 0.5, y: 0, z: -0.5}
     - {x: 0.5, y: 0, z: 0.5}
+    uvs: []
     tris: f9fffffffafffffffbfffffff9fffffffbfffffffcfffffffdfffffffeffffffffffffff
   - foldedOut: 0
     condition: {fileID: 11400000, guid: f7ec7c7d350cfb54b9a0c2251a2373ab, type: 2}
@@ -424,6 +455,7 @@ MonoBehaviour:
     - {x: 1, y: 0, z: 0}
     - {x: 0.5, y: 0, z: -0.5}
     - {x: 0.5, y: 0, z: 0.5}
+    uvs: []
     tris: f9fffffffafffffffbfffffff9fffffffbfffffffcfffffffdfffffffeffffffffffffff
   - foldedOut: 0
     condition: {fileID: 11400000, guid: b8b4324a1b1928c41b0fb56bfbe47c0a, type: 2}
@@ -432,6 +464,7 @@ MonoBehaviour:
     - {x: -0.5, y: 0, z: -0.5}
     - {x: -0.5, y: 0, z: 0.5}
     - {x: 0.5, y: 0, z: 0.5}
+    uvs: []
     tris: fcfffffffdfffffffefffffffcfffffffeffffffffffffff
   - foldedOut: 0
     condition: {fileID: 11400000, guid: 4e7cbaef65b50c745b30b17a879d78f2, type: 2}
@@ -446,6 +479,7 @@ MonoBehaviour:
     - {x: -0.5, y: 0, z: -0.5}
     - {x: -1, y: 0, z: 0}
     - {x: -0.5, y: 0, z: 0.5}
+    uvs: []
     tris: f6fffffff7fffffff8fffffff6fffffff8fffffff9fffffffafffffffbfffffffcfffffffdfffffffeffffffffffffff
   - foldedOut: 0
     condition: {fileID: 11400000, guid: 5d5e75ad494e5b946a605b950de681c3, type: 2}
@@ -454,6 +488,7 @@ MonoBehaviour:
     - {x: -0.5, y: 0, z: -0.5}
     - {x: -0.5, y: 0, z: 0.5}
     - {x: 0.5, y: 0, z: 0.5}
+    uvs: []
     tris: fcfffffffdfffffffefffffffcfffffffeffffffffffffff
   - foldedOut: 0
     condition: {fileID: 11400000, guid: f8865b6179442df4ebb07bd60e4ec6c6, type: 2}
@@ -468,6 +503,7 @@ MonoBehaviour:
     - {x: -0.5, y: 0, z: -0.5}
     - {x: -1, y: 0, z: 0}
     - {x: -0.5, y: 0, z: 0.5}
+    uvs: []
     tris: f6fffffff7fffffff8fffffff6fffffff8fffffff9fffffffafffffffbfffffffcfffffffdfffffffeffffffffffffff
   - foldedOut: 0
     condition: {fileID: 11400000, guid: fc9595ff49f1e9e4c810f08f490edbfc, type: 2}
@@ -476,6 +512,7 @@ MonoBehaviour:
     - {x: -0.5, y: 0, z: -0.5}
     - {x: -0.5, y: 0, z: 0.5}
     - {x: 0.5, y: 0, z: 0.5}
+    uvs: []
     tris: fcfffffffdfffffffefffffffcfffffffeffffffffffffff
   - foldedOut: 0
     condition: {fileID: 11400000, guid: 1446875c576792346b45fa59043286f5, type: 2}
@@ -487,6 +524,7 @@ MonoBehaviour:
     - {x: -0.5, y: 0, z: -0.5}
     - {x: -1, y: 0, z: 0}
     - {x: -0.5, y: 0, z: 0.5}
+    uvs: []
     tris: f9fffffffafffffffbfffffff9fffffffbfffffffcfffffffdfffffffeffffffffffffff
   - foldedOut: 0
     condition: {fileID: 11400000, guid: 61c72e5624c4d2843b7dd3a455fa4a53, type: 2}
@@ -494,6 +532,7 @@ MonoBehaviour:
     - {x: 0.5, y: 0, z: -0.5}
     - {x: -0.5, y: 0, z: -0.5}
     - {x: 0, y: 0, z: 0}
+    uvs: []
     tris: fdfffffffeffffffffffffff
   - foldedOut: 0
     condition: {fileID: 11400000, guid: 218a8f3e832a2ce4795b4de2360830a2, type: 2}
@@ -505,6 +544,7 @@ MonoBehaviour:
     - {x: 0.5, y: 0, z: -0.5}
     - {x: 0, y: 0, z: -1}
     - {x: -0.5, y: 0, z: -0.5}
+    uvs: []
     tris: f9fffffffafffffffbfffffff9fffffffbfffffffcfffffffdfffffffeffffffffffffff
   - foldedOut: 0
     condition: {fileID: 11400000, guid: ba6f959ae1842f448b31cc7fa7ee4ea1, type: 2}
@@ -519,6 +559,7 @@ MonoBehaviour:
     - {x: -0.5, y: 0, z: -0.5}
     - {x: -1, y: 0, z: 0}
     - {x: -0.5, y: 0, z: 0.5}
+    uvs: []
     tris: f6fffffff7fffffff8fffffff6fffffff8fffffff9fffffffafffffffbfffffffcfffffffdfffffffeffffffffffffff
   - foldedOut: 0
     condition: {fileID: 11400000, guid: f2f68044853235842a96e140cb933914, type: 2}
@@ -527,6 +568,7 @@ MonoBehaviour:
     - {x: -0.5, y: 0, z: -0.5}
     - {x: -0.5, y: 0, z: 0.5}
     - {x: 0.5, y: 0, z: 0.5}
+    uvs: []
     tris: fcfffffffdfffffffefffffffcfffffffeffffffffffffff
   - foldedOut: 0
     condition: {fileID: 11400000, guid: 2a245b812d0a8e34ba500991f7d83beb, type: 2}
@@ -538,6 +580,7 @@ MonoBehaviour:
     - {x: -0.5, y: 0, z: -0.5}
     - {x: -1, y: 0, z: 0}
     - {x: -0.5, y: 0, z: 0.5}
+    uvs: []
     tris: f9fffffffafffffffbfffffff9fffffffbfffffffcfffffffdfffffffeffffffffffffff
   - foldedOut: 0
     condition: {fileID: 11400000, guid: 11b6b52591f6e8540b3733c550857733, type: 2}
@@ -546,6 +589,7 @@ MonoBehaviour:
     - {x: -0.5, y: 0, z: -0.5}
     - {x: -0.5, y: 0, z: 0.5}
     - {x: 0.5, y: 0, z: 0.5}
+    uvs: []
     tris: fcfffffffdfffffffefffffffcfffffffeffffffffffffff
   - foldedOut: 0
     condition: {fileID: 11400000, guid: 73623279788b96342b6bf6f22136ab23, type: 2}
@@ -557,6 +601,7 @@ MonoBehaviour:
     - {x: 0.5, y: 0, z: -0.5}
     - {x: 0, y: 0, z: -1}
     - {x: -0.5, y: 0, z: -0.5}
+    uvs: []
     tris: f9fffffffafffffffbfffffff9fffffffbfffffffcfffffffdfffffffeffffffffffffff
   - foldedOut: 0
     condition: {fileID: 11400000, guid: 6d301e444c740534da8060db344056b6, type: 2}
@@ -565,6 +610,7 @@ MonoBehaviour:
     - {x: -0.5, y: 0, z: -0.5}
     - {x: -0.5, y: 0, z: 0.5}
     - {x: 0.5, y: 0, z: 0.5}
+    uvs: []
     tris: fcfffffffdfffffffefffffffcfffffffeffffffffffffff
   - foldedOut: 0
     condition: {fileID: 11400000, guid: 2b4a3b243e6ea9842be994219c224a9b, type: 2}
@@ -573,6 +619,7 @@ MonoBehaviour:
     - {x: -0.5, y: 0, z: -0.5}
     - {x: -0.5, y: 0, z: 0.5}
     - {x: 0.5, y: 0, z: 0.5}
+    uvs: []
     tris: fcfffffffdfffffffefffffffcfffffffeffffffffffffff
   - foldedOut: 0
     condition: {fileID: 11400000, guid: e702ebc682418654bb3f1928a1b52a9c, type: 2}
@@ -584,6 +631,7 @@ MonoBehaviour:
     - {x: 0.5, y: 0, z: -0.5}
     - {x: 0, y: 0, z: -1}
     - {x: -0.5, y: 0, z: -0.5}
+    uvs: []
     tris: f9fffffffafffffffbfffffff9fffffffbfffffffcfffffffdfffffffeffffffffffffff
   - foldedOut: 0
     condition: {fileID: 11400000, guid: 7d4a7ec43c1856647bf8c0a5b2909f29, type: 2}
@@ -595,6 +643,7 @@ MonoBehaviour:
     - {x: 0.5, y: 0, z: -0.5}
     - {x: 0, y: 0, z: -1}
     - {x: -0.5, y: 0, z: -0.5}
+    uvs: []
     tris: f9fffffffafffffffbfffffff9fffffffbfffffffcfffffffdfffffffeffffffffffffff
   - foldedOut: 0
     condition: {fileID: 11400000, guid: 4ff1b1bd9c4436d44a71de509afdf159, type: 2}
@@ -606,6 +655,7 @@ MonoBehaviour:
     - {x: -0.5, y: 0, z: -0.5}
     - {x: -1, y: 0, z: 0}
     - {x: -0.5, y: 0, z: 0.5}
+    uvs: []
     tris: f9fffffffafffffffbfffffff9fffffffbfffffffcfffffffdfffffffeffffffffffffff
   - foldedOut: 0
     condition: {fileID: 11400000, guid: 1152cded24c996e4393804c0c3d7c1d8, type: 2}
@@ -614,6 +664,7 @@ MonoBehaviour:
     - {x: -0.5, y: 0, z: -0.5}
     - {x: -0.5, y: 0, z: 0.5}
     - {x: 0.5, y: 0, z: 0.5}
+    uvs: []
     tris: fcfffffffdfffffffefffffffcfffffffeffffffffffffff
   - foldedOut: 0
     condition: {fileID: 11400000, guid: 77573f18e27010649ac01957a653351f, type: 2}
@@ -622,6 +673,7 @@ MonoBehaviour:
     - {x: -0.5, y: 0, z: -0.5}
     - {x: -0.5, y: 0, z: 0.5}
     - {x: 0.5, y: 0, z: 0.5}
+    uvs: []
     tris: fcfffffffdfffffffefffffffcfffffffeffffffffffffff
   - foldedOut: 0
     condition: {fileID: 11400000, guid: 8d75387b74915f34ea8f93f464b81989, type: 2}
@@ -636,6 +688,7 @@ MonoBehaviour:
     - {x: 1, y: 0, z: 0}
     - {x: 0.5, y: 0, z: -0.5}
     - {x: 0.5, y: 0, z: 0.5}
+    uvs: []
     tris: f6fffffff7fffffff8fffffff6fffffff8fffffff9fffffffafffffffbfffffffcfffffffdfffffffeffffffffffffff
   - foldedOut: 0
     condition: {fileID: 11400000, guid: a4884f5f1e367534abcecad337c025f4, type: 2}
@@ -647,6 +700,7 @@ MonoBehaviour:
     - {x: -0.5, y: 0, z: -0.5}
     - {x: -1, y: 0, z: 0}
     - {x: -0.5, y: 0, z: 0.5}
+    uvs: []
     tris: f9fffffffafffffffbfffffff9fffffffbfffffffcfffffffdfffffffeffffffffffffff
   - foldedOut: 0
     condition: {fileID: 11400000, guid: 7b2aec5b046c1c24d9a751af4adffe97, type: 2}
@@ -661,6 +715,7 @@ MonoBehaviour:
     - {x: -0.5, y: 0, z: -0.5}
     - {x: -1, y: 0, z: 0}
     - {x: -0.5, y: 0, z: 0.5}
+    uvs: []
     tris: f6fffffff7fffffff8fffffff6fffffff8fffffff9fffffffafffffffbfffffffcfffffffdfffffffeffffffffffffff
   - foldedOut: 0
     condition: {fileID: 11400000, guid: 85ba959ba875d8b45a9bf86a51e44bb1, type: 2}
@@ -678,6 +733,7 @@ MonoBehaviour:
     - {x: 1, y: 0, z: 0}
     - {x: 0.5, y: 0, z: -0.5}
     - {x: 0.5, y: 0, z: 0.5}
+    uvs: []
     tris: f3fffffff4fffffff5fffffff3fffffff5fffffff6fffffff7fffffff8fffffff9fffffffafffffffbfffffffcfffffffdfffffffeffffffffffffff
   - foldedOut: 0
     condition: {fileID: 11400000, guid: fe9a5c705189a6340855d29a0aba7d41, type: 2}
@@ -689,6 +745,7 @@ MonoBehaviour:
     - {x: -0.5, y: 0, z: -0.5}
     - {x: -1, y: 0, z: 0}
     - {x: -0.5, y: 0, z: 0.5}
+    uvs: []
     tris: f9fffffffafffffffbfffffff9fffffffbfffffffcfffffffdfffffffeffffffffffffff
   - foldedOut: 0
     condition: {fileID: 11400000, guid: 8ce9fc7308fc4ea4690da28808ff002a, type: 2}
@@ -700,6 +757,7 @@ MonoBehaviour:
     - {x: -0.5, y: 0, z: -0.5}
     - {x: -1, y: 0, z: 0}
     - {x: -0.5, y: 0, z: 0.5}
+    uvs: []
     tris: f9fffffffafffffffbfffffff9fffffffbfffffffcfffffffdfffffffeffffffffffffff
   - foldedOut: 0
     condition: {fileID: 11400000, guid: a3440c113c3f3044da18707275453eca, type: 2}
@@ -717,6 +775,7 @@ MonoBehaviour:
     - {x: 1, y: 0, z: 0}
     - {x: 0.5, y: 0, z: -0.5}
     - {x: 0.5, y: 0, z: 0.5}
+    uvs: []
     tris: f3fffffff4fffffff5fffffff3fffffff5fffffff6fffffff7fffffff8fffffff9fffffffafffffffbfffffffcfffffffdfffffffeffffffffffffff
   - foldedOut: 0
     condition: {fileID: 11400000, guid: 924bd9221b05f4f40b94eb2f4772b212, type: 2}
@@ -734,6 +793,7 @@ MonoBehaviour:
     - {x: 1, y: 0, z: 0}
     - {x: 0.5, y: 0, z: -0.5}
     - {x: 0.5, y: 0, z: 0.5}
+    uvs: []
     tris: f3fffffff4fffffff5fffffff3fffffff5fffffff6fffffff7fffffff8fffffff9fffffffafffffffbfffffffcfffffffdfffffffeffffffffffffff
   - foldedOut: 0
     condition: {fileID: 11400000, guid: 9cf24b6d0d0597d458149fc9f5ef1dbf, type: 2}
@@ -748,6 +808,7 @@ MonoBehaviour:
     - {x: 1, y: 0, z: 0}
     - {x: 0.5, y: 0, z: -0.5}
     - {x: 0.5, y: 0, z: 0.5}
+    uvs: []
     tris: f6fffffff7fffffff8fffffff6fffffff8fffffff9fffffffafffffffbfffffffcfffffffdfffffffeffffffffffffff
   - foldedOut: 0
     condition: {fileID: 11400000, guid: 28d3afb622ee6ee48af8e54ed34bdec7, type: 2}
@@ -762,6 +823,7 @@ MonoBehaviour:
     - {x: 1, y: 0, z: 0}
     - {x: 0.5, y: 0, z: -0.5}
     - {x: 0.5, y: 0, z: 0.5}
+    uvs: []
     tris: f6fffffff7fffffff8fffffff6fffffff8fffffff9fffffffafffffffbfffffffcfffffffdfffffffeffffffffffffff
   - foldedOut: 0
     condition: {fileID: 11400000, guid: 338652c8d944bea45bcdc30fbce05bb4, type: 2}
@@ -770,6 +832,7 @@ MonoBehaviour:
     - {x: -0.5, y: 0, z: -0.5}
     - {x: -0.5, y: 0, z: 0.5}
     - {x: 0.5, y: 0, z: 0.5}
+    uvs: []
     tris: fcfffffffdfffffffefffffffcfffffffeffffffffffffff
   - foldedOut: 0
     condition: {fileID: 11400000, guid: d58bfcfd46edeab4499a1b68e35f5cb7, type: 2}
@@ -781,6 +844,7 @@ MonoBehaviour:
     - {x: 0.5, y: 0, z: -0.5}
     - {x: 0, y: 0, z: -1}
     - {x: -0.5, y: 0, z: -0.5}
+    uvs: []
     tris: f9fffffffafffffffbfffffff9fffffffbfffffffcfffffffdfffffffeffffffffffffff
   - foldedOut: 0
     condition: {fileID: 11400000, guid: 66040ac53d0cee640ad27a93d16d28e7, type: 2}
@@ -789,6 +853,7 @@ MonoBehaviour:
     - {x: -0.5, y: 0, z: -0.5}
     - {x: -0.5, y: 0, z: 0.5}
     - {x: 0.5, y: 0, z: 0.5}
+    uvs: []
     tris: fcfffffffdfffffffefffffffcfffffffeffffffffffffff
   - foldedOut: 0
     condition: {fileID: 11400000, guid: e710fd262f772cd4b9d4c27d925564d1, type: 2}
@@ -797,6 +862,7 @@ MonoBehaviour:
     - {x: -0.5, y: 0, z: -0.5}
     - {x: -0.5, y: 0, z: 0.5}
     - {x: 0.5, y: 0, z: 0.5}
+    uvs: []
     tris: fcfffffffdfffffffefffffffcfffffffeffffffffffffff
   - foldedOut: 0
     condition: {fileID: 11400000, guid: 4eed2ed4080e56c4694d1cc9d99b8a2c, type: 2}
@@ -808,6 +874,7 @@ MonoBehaviour:
     - {x: 1, y: 0, z: 0}
     - {x: 0.5, y: 0, z: -0.5}
     - {x: 0.5, y: 0, z: 0.5}
+    uvs: []
     tris: f9fffffffafffffffbfffffff9fffffffbfffffffcfffffffdfffffffeffffffffffffff
   - foldedOut: 0
     condition: {fileID: 11400000, guid: c691d49d455a07e448a576365f5f6c42, type: 2}
@@ -822,6 +889,7 @@ MonoBehaviour:
     - {x: 1, y: 0, z: 0}
     - {x: 0.5, y: 0, z: -0.5}
     - {x: 0.5, y: 0, z: 0.5}
+    uvs: []
     tris: f6fffffff7fffffff8fffffff6fffffff8fffffff9fffffffafffffffbfffffffcfffffffdfffffffeffffffffffffff
   - foldedOut: 0
     condition: {fileID: 11400000, guid: 309a4a9e32e947040bc6e29753251c6d, type: 2}
@@ -836,6 +904,7 @@ MonoBehaviour:
     - {x: 1, y: 0, z: 0}
     - {x: 0.5, y: 0, z: -0.5}
     - {x: 0.5, y: 0, z: 0.5}
+    uvs: []
     tris: f6fffffff7fffffff8fffffff6fffffff8fffffff9fffffffafffffffbfffffffcfffffffdfffffffeffffffffffffff
   - foldedOut: 0
     condition: {fileID: 11400000, guid: 25e8537449c4afe4fa33f4bbaa208d50, type: 2}
@@ -847,6 +916,7 @@ MonoBehaviour:
     - {x: 1, y: 0, z: 0}
     - {x: 0.5, y: 0, z: -0.5}
     - {x: 0.5, y: 0, z: 0.5}
+    uvs: []
     tris: f9fffffffafffffffbfffffff9fffffffbfffffffcfffffffdfffffffeffffffffffffff
   - foldedOut: 0
     condition: {fileID: 11400000, guid: ed5aad51feaa7854ba3ebd8c96f10a7f, type: 2}
@@ -858,6 +928,7 @@ MonoBehaviour:
     - {x: 1, y: 0, z: 0}
     - {x: 0.5, y: 0, z: -0.5}
     - {x: 0.5, y: 0, z: 0.5}
+    uvs: []
     tris: f9fffffffafffffffbfffffff9fffffffbfffffffcfffffffdfffffffeffffffffffffff
   - foldedOut: 0
     condition: {fileID: 11400000, guid: e8844c54bf636f7498141361a7bed8b6, type: 2}
@@ -872,6 +943,7 @@ MonoBehaviour:
     - {x: 1, y: 0, z: 0}
     - {x: 0.5, y: 0, z: -0.5}
     - {x: 0.5, y: 0, z: 0.5}
+    uvs: []
     tris: f6fffffff7fffffff8fffffff6fffffff8fffffff9fffffffafffffffbfffffffcfffffffdfffffffeffffffffffffff
   - foldedOut: 0
     condition: {fileID: 11400000, guid: e8e79ecc3e4b14642843a9527d9245cb, type: 2}
@@ -879,6 +951,7 @@ MonoBehaviour:
     - {x: 0, y: 0, z: 0}
     - {x: -0.5, y: 0, z: -0.5}
     - {x: -0.5, y: 0, z: 0.5}
+    uvs: []
     tris: fdfffffffeffffffffffffff
   - foldedOut: 0
     condition: {fileID: 11400000, guid: 526d2a5996458834392ad6ec044879e6, type: 2}
@@ -890,6 +963,7 @@ MonoBehaviour:
     - {x: -0.5, y: 0, z: -0.5}
     - {x: -1, y: 0, z: 0}
     - {x: -0.5, y: 0, z: 0.5}
+    uvs: []
     tris: f9fffffffafffffffbfffffff9fffffffbfffffffcfffffffdfffffffeffffffffffffff
   - foldedOut: 0
     condition: {fileID: 11400000, guid: cf9fa7ea975655b49b7cf5e410f602b2, type: 2}
@@ -904,6 +978,7 @@ MonoBehaviour:
     - {x: -0.5, y: 0, z: -0.5}
     - {x: -1, y: 0, z: 0}
     - {x: -0.5, y: 0, z: 0.5}
+    uvs: []
     tris: f6fffffff7fffffff8fffffff6fffffff8fffffff9fffffffafffffffbfffffffcfffffffdfffffffeffffffffffffff
   - foldedOut: 0
     condition: {fileID: 11400000, guid: 93a6eec1e2a1964418d3f3c55b078b0a, type: 2}
@@ -915,6 +990,7 @@ MonoBehaviour:
     - {x: -0.5, y: 0, z: -0.5}
     - {x: -1, y: 0, z: 0}
     - {x: -0.5, y: 0, z: 0.5}
+    uvs: []
     tris: f9fffffffafffffffbfffffff9fffffffbfffffffcfffffffdfffffffeffffffffffffff
   - foldedOut: 0
     condition: {fileID: 11400000, guid: 90b8e34a73146ce4eb7db75959ffe69f, type: 2}
@@ -926,6 +1002,7 @@ MonoBehaviour:
     - {x: -0.5, y: 0, z: -0.5}
     - {x: -1, y: 0, z: 0}
     - {x: -0.5, y: 0, z: 0.5}
+    uvs: []
     tris: f9fffffffafffffffbfffffff9fffffffbfffffffcfffffffdfffffffeffffffffffffff
   - foldedOut: 0
     condition: {fileID: 11400000, guid: 4a2145f3bc2a3f14cb9df55bdd03dfeb, type: 2}
@@ -940,6 +1017,7 @@ MonoBehaviour:
     - {x: -0.5, y: 0, z: -0.5}
     - {x: -1, y: 0, z: 0}
     - {x: -0.5, y: 0, z: 0.5}
+    uvs: []
     tris: f6fffffff7fffffff8fffffff6fffffff8fffffff9fffffffafffffffbfffffffcfffffffdfffffffeffffffffffffff
   - foldedOut: 0
     condition: {fileID: 11400000, guid: 2ae3d00967660944e906d293404dbe22, type: 2}
@@ -954,6 +1032,7 @@ MonoBehaviour:
     - {x: -0.5, y: 0, z: -0.5}
     - {x: -1, y: 0, z: 0}
     - {x: -0.5, y: 0, z: 0.5}
+    uvs: []
     tris: f6fffffff7fffffff8fffffff6fffffff8fffffff9fffffffafffffffbfffffffcfffffffdfffffffeffffffffffffff
   - foldedOut: 0
     condition: {fileID: 11400000, guid: bf4eb73d34f160c4ba40e7340195c1fb, type: 2}
@@ -965,6 +1044,7 @@ MonoBehaviour:
     - {x: -0.5, y: 0, z: -0.5}
     - {x: -1, y: 0, z: 0}
     - {x: -0.5, y: 0, z: 0.5}
+    uvs: []
     tris: f9fffffffafffffffbfffffff9fffffffbfffffffcfffffffdfffffffeffffffffffffff
   - foldedOut: 0
     condition: {fileID: 11400000, guid: cee4b15bf047beb4a8fbbb15d73b6aa7, type: 2}
@@ -976,6 +1056,7 @@ MonoBehaviour:
     - {x: -0.5, y: 0, z: -0.5}
     - {x: -1, y: 0, z: 0}
     - {x: -0.5, y: 0, z: 0.5}
+    uvs: []
     tris: f9fffffffafffffffbfffffff9fffffffbfffffffcfffffffdfffffffeffffffffffffff
   - foldedOut: 0
     condition: {fileID: 11400000, guid: 2d17bed8050af574d8224a9c1df01846, type: 2}
@@ -984,6 +1065,7 @@ MonoBehaviour:
     - {x: -0.5, y: 0, z: -0.5}
     - {x: -0.5, y: 0, z: 0.5}
     - {x: 0.5, y: 0, z: 0.5}
+    uvs: []
     tris: fcfffffffdfffffffefffffffcfffffffeffffffffffffff
   - foldedOut: 0
     condition: {fileID: 11400000, guid: 5c5b5e7abefcbd44a90b48a31f20d720, type: 2}
@@ -995,6 +1077,7 @@ MonoBehaviour:
     - {x: 0.5, y: 0, z: -0.5}
     - {x: 0, y: 0, z: -1}
     - {x: -0.5, y: 0, z: -0.5}
+    uvs: []
     tris: f9fffffffafffffffbfffffff9fffffffbfffffffcfffffffdfffffffeffffffffffffff
   - foldedOut: 0
     condition: {fileID: 11400000, guid: 3781aee3ed961334caca3d6e0d9c7937, type: 2}
@@ -1006,6 +1089,7 @@ MonoBehaviour:
     - {x: 0.5, y: 0, z: -0.5}
     - {x: 0, y: 0, z: -1}
     - {x: -0.5, y: 0, z: -0.5}
+    uvs: []
     tris: f9fffffffafffffffbfffffff9fffffffbfffffffcfffffffdfffffffeffffffffffffff
   - foldedOut: 0
     condition: {fileID: 11400000, guid: ba7cd4d545ce11948962e2f82e5bc824, type: 2}
@@ -1014,6 +1098,7 @@ MonoBehaviour:
     - {x: -0.5, y: 0, z: -0.5}
     - {x: -0.5, y: 0, z: 0.5}
     - {x: 0.5, y: 0, z: 0.5}
+    uvs: []
     tris: fcfffffffdfffffffefffffffcfffffffeffffffffffffff
   - foldedOut: 0
     condition: {fileID: 11400000, guid: 0711f89fdae4f604aa712609936c8cdd, type: 2}
@@ -1022,6 +1107,7 @@ MonoBehaviour:
     - {x: -0.5, y: 0, z: -0.5}
     - {x: -0.5, y: 0, z: 0.5}
     - {x: 0.5, y: 0, z: 0.5}
+    uvs: []
     tris: fcfffffffdfffffffefffffffcfffffffeffffffffffffff
   - foldedOut: 0
     condition: {fileID: 11400000, guid: b215820582747994ea0354c8fd0bbbfe, type: 2}
@@ -1033,6 +1119,7 @@ MonoBehaviour:
     - {x: 0.5, y: 0, z: -0.5}
     - {x: 0, y: 0, z: -1}
     - {x: -0.5, y: 0, z: -0.5}
+    uvs: []
     tris: f9fffffffafffffffbfffffff9fffffffbfffffffcfffffffdfffffffeffffffffffffff
   - foldedOut: 0
     condition: {fileID: 11400000, guid: f13af4ca679621b44b791d6d65137f71, type: 2}
@@ -1044,6 +1131,7 @@ MonoBehaviour:
     - {x: 0.5, y: 0, z: -0.5}
     - {x: 0, y: 0, z: -1}
     - {x: -0.5, y: 0, z: -0.5}
+    uvs: []
     tris: f9fffffffafffffffbfffffff9fffffffbfffffffcfffffffdfffffffeffffffffffffff
   - foldedOut: 0
     condition: {fileID: 11400000, guid: a5a60906c8860bc489bb673abb2e2b25, type: 2}
@@ -1052,6 +1140,7 @@ MonoBehaviour:
     - {x: -0.5, y: 0, z: -0.5}
     - {x: -0.5, y: 0, z: 0.5}
     - {x: 0.5, y: 0, z: 0.5}
+    uvs: []
     tris: fcfffffffdfffffffefffffffcfffffffeffffffffffffff
   - foldedOut: 0
     condition: {fileID: 11400000, guid: 7786fd76bb8a88b45b5e9a69d588a46d, type: 2}
@@ -1060,6 +1149,7 @@ MonoBehaviour:
     - {x: -0.5, y: 0, z: -0.5}
     - {x: -0.5, y: 0, z: 0.5}
     - {x: 0.5, y: 0, z: 0.5}
+    uvs: []
     tris: fcfffffffdfffffffefffffffcfffffffeffffffffffffff
   - foldedOut: 0
     condition: {fileID: 11400000, guid: 631f3034f20e23a48b990febd29e1e51, type: 2}
@@ -1068,6 +1158,7 @@ MonoBehaviour:
     - {x: -0.5, y: 0, z: -0.5}
     - {x: -0.5, y: 0, z: 0.5}
     - {x: 0.5, y: 0, z: 0.5}
+    uvs: []
     tris: fcfffffffdfffffffefffffffcfffffffeffffffffffffff
   - foldedOut: 0
     condition: {fileID: 11400000, guid: 0141542626b732a4d8061d59280cc77b, type: 2}
@@ -1076,6 +1167,7 @@ MonoBehaviour:
     - {x: -0.5, y: 0, z: -0.5}
     - {x: -0.5, y: 0, z: 0.5}
     - {x: 0.5, y: 0, z: 0.5}
+    uvs: []
     tris: fcfffffffdfffffffefffffffcfffffffeffffffffffffff
   - foldedOut: 0
     condition: {fileID: 11400000, guid: 10d6cdfe720b0b94db3ae1c83e9b4851, type: 2}
@@ -1090,6 +1182,7 @@ MonoBehaviour:
     - {x: 0.5, y: 0, z: 0.5}
     - {x: -0.5, y: 0, z: 0.5}
     - {x: 0, y: 0, z: 1}
+    uvs: []
     tris: f6fffffff7fffffff8fffffff6fffffff8fffffff9fffffffafffffffbfffffffcfffffffdfffffffeffffffffffffff
   - foldedOut: 0
     condition: {fileID: 11400000, guid: 3770267ad094fd841b7cc616ba94d759, type: 2}
@@ -1110,6 +1203,7 @@ MonoBehaviour:
     - {x: 0.5, y: 0, z: 0.5}
     - {x: -0.5, y: 0, z: 0.5}
     - {x: 0, y: 0, z: 1}
+    uvs: []
     tris: f0fffffff1fffffff2fffffff0fffffff2fffffff3fffffff4fffffff5fffffff6fffffff7fffffff8fffffff9fffffffafffffffbfffffffcfffffffdfffffffeffffffffffffff
   - foldedOut: 0
     condition: {fileID: 11400000, guid: 451ef8c0d44f3fc46a76a68723fe9266, type: 2}
@@ -1124,6 +1218,7 @@ MonoBehaviour:
     - {x: 0.5, y: 0, z: 0.5}
     - {x: -0.5, y: 0, z: 0.5}
     - {x: 0, y: 0, z: 1}
+    uvs: []
     tris: f6fffffff7fffffff8fffffff6fffffff8fffffff9fffffffafffffffbfffffffcfffffffdfffffffeffffffffffffff
   - foldedOut: 0
     condition: {fileID: 11400000, guid: 9fad1c2f2ca47eb45b04408037fda3d9, type: 2}
@@ -1141,6 +1236,7 @@ MonoBehaviour:
     - {x: 0.5, y: 0, z: 0.5}
     - {x: -0.5, y: 0, z: 0.5}
     - {x: 0, y: 0, z: 1}
+    uvs: []
     tris: f3fffffff4fffffff5fffffff3fffffff5fffffff6fffffff7fffffff8fffffff9fffffffafffffffbfffffffcfffffffdfffffffeffffffffffffff
   - foldedOut: 0
     condition: {fileID: 11400000, guid: d235a00df5d77714a9dfd3ca2347f87b, type: 2}
@@ -1158,6 +1254,7 @@ MonoBehaviour:
     - {x: 0.5, y: 0, z: 0.5}
     - {x: -0.5, y: 0, z: 0.5}
     - {x: 0, y: 0, z: 1}
+    uvs: []
     tris: f3fffffff4fffffff5fffffff3fffffff5fffffff6fffffff7fffffff8fffffff9fffffffafffffffbfffffffcfffffffdfffffffeffffffffffffff
   - foldedOut: 0
     condition: {fileID: 11400000, guid: 58af9fa2f263ec64ea4ace194f3aa1e9, type: 2}
@@ -1178,6 +1275,7 @@ MonoBehaviour:
     - {x: 0.5, y: 0, z: 0.5}
     - {x: -0.5, y: 0, z: 0.5}
     - {x: 0, y: 0, z: 1}
+    uvs: []
     tris: f0fffffff1fffffff2fffffff0fffffff2fffffff3fffffff4fffffff5fffffff6fffffff7fffffff8fffffff9fffffffafffffffbfffffffcfffffffdfffffffeffffffffffffff
   - foldedOut: 0
     condition: {fileID: 11400000, guid: ba54121f905ce3145bcdafa1a435c355, type: 2}
@@ -1192,6 +1290,7 @@ MonoBehaviour:
     - {x: 0.5, y: 0, z: 0.5}
     - {x: -0.5, y: 0, z: 0.5}
     - {x: 0, y: 0, z: 1}
+    uvs: []
     tris: f6fffffff7fffffff8fffffff6fffffff8fffffff9fffffffafffffffbfffffffcfffffffdfffffffeffffffffffffff
   - foldedOut: 0
     condition: {fileID: 11400000, guid: 4b0a96f1ea7d6dd46960247882f82322, type: 2}
@@ -1209,6 +1308,7 @@ MonoBehaviour:
     - {x: 0.5, y: 0, z: 0.5}
     - {x: -0.5, y: 0, z: 0.5}
     - {x: 0, y: 0, z: 1}
+    uvs: []
     tris: f3fffffff4fffffff5fffffff3fffffff5fffffff6fffffff7fffffff8fffffff9fffffffafffffffbfffffffcfffffffdfffffffeffffffffffffff
   - foldedOut: 0
     condition: {fileID: 11400000, guid: 2c28002c29363404fabcec494c47c44d, type: 2}
@@ -1223,6 +1323,7 @@ MonoBehaviour:
     - {x: 1, y: 0, z: 0}
     - {x: 0.5, y: 0, z: -0.5}
     - {x: 0.5, y: 0, z: 0.5}
+    uvs: []
     tris: f6fffffff7fffffff8fffffff6fffffff8fffffff9fffffffafffffffbfffffffcfffffffdfffffffeffffffffffffff
   - foldedOut: 0
     condition: {fileID: 11400000, guid: eecfb635f9c2ed84baa5484c740ab57f, type: 2}
@@ -1237,6 +1338,7 @@ MonoBehaviour:
     - {x: 0.5, y: 0, z: 0.5}
     - {x: -0.5, y: 0, z: 0.5}
     - {x: 0, y: 0, z: 1}
+    uvs: []
     tris: f6fffffff7fffffff8fffffff6fffffff8fffffff9fffffffafffffffbfffffffcfffffffdfffffffeffffffffffffff
   - foldedOut: 0
     condition: {fileID: 11400000, guid: 909c3c26e9f927a48b918e5d7b76451a, type: 2}
@@ -1254,6 +1356,7 @@ MonoBehaviour:
     - {x: 0.5, y: 0, z: 0.5}
     - {x: -0.5, y: 0, z: 0.5}
     - {x: 0, y: 0, z: 1}
+    uvs: []
     tris: f3fffffff4fffffff5fffffff3fffffff5fffffff6fffffff7fffffff8fffffff9fffffffafffffffbfffffffcfffffffdfffffffeffffffffffffff
   - foldedOut: 0
     condition: {fileID: 11400000, guid: ab5b05451ae39bd44a467bb4ba03f574, type: 2}
@@ -1268,6 +1371,7 @@ MonoBehaviour:
     - {x: 0.5, y: 0, z: 0.5}
     - {x: -0.5, y: 0, z: 0.5}
     - {x: 0, y: 0, z: 1}
+    uvs: []
     tris: f6fffffff7fffffff8fffffff6fffffff8fffffff9fffffffafffffffbfffffffcfffffffdfffffffeffffffffffffff
   - foldedOut: 0
     condition: {fileID: 11400000, guid: 0b485b92fee13f948b22894621a39733, type: 2}
@@ -1282,6 +1386,7 @@ MonoBehaviour:
     - {x: 0.5, y: 0, z: 0.5}
     - {x: -0.5, y: 0, z: 0.5}
     - {x: 0, y: 0, z: 1}
+    uvs: []
     tris: f6fffffff7fffffff8fffffff6fffffff8fffffff9fffffffafffffffbfffffffcfffffffdfffffffeffffffffffffff
   - foldedOut: 0
     condition: {fileID: 11400000, guid: 0865534c08728a94fa4ca037b91ebf24, type: 2}
@@ -1299,6 +1404,7 @@ MonoBehaviour:
     - {x: 0.5, y: 0, z: 0.5}
     - {x: -0.5, y: 0, z: 0.5}
     - {x: 0, y: 0, z: 1}
+    uvs: []
     tris: f3fffffff4fffffff5fffffff3fffffff5fffffff6fffffff7fffffff8fffffff9fffffffafffffffbfffffffcfffffffdfffffffeffffffffffffff
   - foldedOut: 0
     condition: {fileID: 11400000, guid: 0040c41f90e8d9f47971f0e1caed4a2e, type: 2}
@@ -1316,6 +1422,7 @@ MonoBehaviour:
     - {x: 0.5, y: 0, z: 0.5}
     - {x: -0.5, y: 0, z: 0.5}
     - {x: 0, y: 0, z: 1}
+    uvs: []
     tris: f3fffffff4fffffff5fffffff3fffffff5fffffff6fffffff7fffffff8fffffff9fffffffafffffffbfffffffcfffffffdfffffffeffffffffffffff
   - foldedOut: 0
     condition: {fileID: 11400000, guid: 9fbd231505bcf644d8ce6fd1d0e2409a, type: 2}
@@ -1330,6 +1437,7 @@ MonoBehaviour:
     - {x: 0.5, y: 0, z: 0.5}
     - {x: -0.5, y: 0, z: 0.5}
     - {x: 0, y: 0, z: 1}
+    uvs: []
     tris: f6fffffff7fffffff8fffffff6fffffff8fffffff9fffffffafffffffbfffffffcfffffffdfffffffeffffffffffffff
   - foldedOut: 0
     condition: {fileID: 11400000, guid: 99d0bee70c953084c8b7536bd1c347cb, type: 2}
@@ -1344,6 +1452,7 @@ MonoBehaviour:
     - {x: 0.5, y: 0, z: 0.5}
     - {x: -0.5, y: 0, z: 0.5}
     - {x: 0, y: 0, z: 1}
+    uvs: []
     tris: f6fffffff7fffffff8fffffff6fffffff8fffffff9fffffffafffffffbfffffffcfffffffdfffffffeffffffffffffff
   - foldedOut: 0
     condition: {fileID: 11400000, guid: 148785e6e0c547144a7042419fd11323, type: 2}
@@ -1358,6 +1467,7 @@ MonoBehaviour:
     - {x: 1, y: 0, z: 0}
     - {x: 0.5, y: 0, z: -0.5}
     - {x: 0.5, y: 0, z: 0.5}
+    uvs: []
     tris: f6fffffff7fffffff8fffffff6fffffff8fffffff9fffffffafffffffbfffffffcfffffffdfffffffeffffffffffffff
   - foldedOut: 0
     condition: {fileID: 11400000, guid: 2a6d28fd118659249a46a5510db80c52, type: 2}
@@ -1369,6 +1479,7 @@ MonoBehaviour:
     - {x: 1, y: 0, z: 0}
     - {x: 0.5, y: 0, z: -0.5}
     - {x: 0.5, y: 0, z: 0.5}
+    uvs: []
     tris: f9fffffffafffffffbfffffff9fffffffbfffffffcfffffffdfffffffeffffffffffffff
   - foldedOut: 0
     condition: {fileID: 11400000, guid: b7a75ba8a644048409aa25adc44ad14e, type: 2}
@@ -1380,6 +1491,7 @@ MonoBehaviour:
     - {x: 0.5, y: 0, z: 0.5}
     - {x: -0.5, y: 0, z: 0.5}
     - {x: 0, y: 0, z: 1}
+    uvs: []
     tris: f9fffffffafffffffbfffffff9fffffffbfffffffcfffffffdfffffffeffffffffffffff
   - foldedOut: 0
     condition: {fileID: 11400000, guid: 8558ac9b103a4204ba2cf1aceb3e57a4, type: 2}
@@ -1397,6 +1509,7 @@ MonoBehaviour:
     - {x: 0.5, y: 0, z: 0.5}
     - {x: -0.5, y: 0, z: 0.5}
     - {x: 0, y: 0, z: 1}
+    uvs: []
     tris: f3fffffff4fffffff5fffffff3fffffff5fffffff6fffffff7fffffff8fffffff9fffffffafffffffbfffffffcfffffffdfffffffeffffffffffffff
   - foldedOut: 0
     condition: {fileID: 11400000, guid: abda5ebf80bf0f24da55565ab8c5d7e0, type: 2}
@@ -1408,6 +1521,7 @@ MonoBehaviour:
     - {x: 0.5, y: 0, z: 0.5}
     - {x: -0.5, y: 0, z: 0.5}
     - {x: 0, y: 0, z: 1}
+    uvs: []
     tris: f9fffffffafffffffbfffffff9fffffffbfffffffcfffffffdfffffffeffffffffffffff
   - foldedOut: 0
     condition: {fileID: 11400000, guid: c96276770b3c36e44a00dbd187f506c4, type: 2}
@@ -1422,6 +1536,7 @@ MonoBehaviour:
     - {x: 0.5, y: 0, z: 0.5}
     - {x: -0.5, y: 0, z: 0.5}
     - {x: 0, y: 0, z: 1}
+    uvs: []
     tris: f6fffffff7fffffff8fffffff6fffffff8fffffff9fffffffafffffffbfffffffcfffffffdfffffffeffffffffffffff
   - foldedOut: 0
     condition: {fileID: 11400000, guid: c999b336951df2347bb10db1af7fe715, type: 2}
@@ -1436,6 +1551,7 @@ MonoBehaviour:
     - {x: 0.5, y: 0, z: 0.5}
     - {x: -0.5, y: 0, z: 0.5}
     - {x: 0, y: 0, z: 1}
+    uvs: []
     tris: f6fffffff7fffffff8fffffff6fffffff8fffffff9fffffffafffffffbfffffffcfffffffdfffffffeffffffffffffff
   - foldedOut: 0
     condition: {fileID: 11400000, guid: 796c53643b092774c8121e0d56c009ed, type: 2}
@@ -1453,6 +1569,7 @@ MonoBehaviour:
     - {x: 0.5, y: 0, z: 0.5}
     - {x: -0.5, y: 0, z: 0.5}
     - {x: 0, y: 0, z: 1}
+    uvs: []
     tris: f3fffffff4fffffff5fffffff3fffffff5fffffff6fffffff7fffffff8fffffff9fffffffafffffffbfffffffcfffffffdfffffffeffffffffffffff
   - foldedOut: 0
     condition: {fileID: 11400000, guid: 5a33f45616e07c940af07a88d37d667c, type: 2}
@@ -1464,6 +1581,7 @@ MonoBehaviour:
     - {x: 1, y: 0, z: 0}
     - {x: 0.5, y: 0, z: -0.5}
     - {x: 0.5, y: 0, z: 0.5}
+    uvs: []
     tris: f9fffffffafffffffbfffffff9fffffffbfffffffcfffffffdfffffffeffffffffffffff
   - foldedOut: 0
     condition: {fileID: 11400000, guid: 264e9674235938c46ac7f93077299f15, type: 2}
@@ -1475,6 +1593,7 @@ MonoBehaviour:
     - {x: 0.5, y: 0, z: 0.5}
     - {x: -0.5, y: 0, z: 0.5}
     - {x: 0, y: 0, z: 1}
+    uvs: []
     tris: f9fffffffafffffffbfffffff9fffffffbfffffffcfffffffdfffffffeffffffffffffff
   - foldedOut: 0
     condition: {fileID: 11400000, guid: b7d82aacec9fdd0478c57f25d0b73a00, type: 2}
@@ -1489,6 +1608,7 @@ MonoBehaviour:
     - {x: 0.5, y: 0, z: 0.5}
     - {x: -0.5, y: 0, z: 0.5}
     - {x: 0, y: 0, z: 1}
+    uvs: []
     tris: f6fffffff7fffffff8fffffff6fffffff8fffffff9fffffffafffffffbfffffffcfffffffdfffffffeffffffffffffff
   - foldedOut: 0
     condition: {fileID: 11400000, guid: ea39abef5f8a4d643a9fc77932739a4d, type: 2}
@@ -1500,6 +1620,7 @@ MonoBehaviour:
     - {x: 0.5, y: 0, z: 0.5}
     - {x: -0.5, y: 0, z: 0.5}
     - {x: 0, y: 0, z: 1}
+    uvs: []
     tris: f9fffffffafffffffbfffffff9fffffffbfffffffcfffffffdfffffffeffffffffffffff
   - foldedOut: 0
     condition: {fileID: 11400000, guid: 6de90a8306801c24da3f9552bdbb1e08, type: 2}
@@ -1514,6 +1635,7 @@ MonoBehaviour:
     - {x: 0.5, y: 0, z: 0.5}
     - {x: -0.5, y: 0, z: 0.5}
     - {x: 0, y: 0, z: 1}
+    uvs: []
     tris: f6fffffff7fffffff8fffffff6fffffff8fffffff9fffffffafffffffbfffffffcfffffffdfffffffeffffffffffffff
   - foldedOut: 0
     condition: {fileID: 11400000, guid: e456b0aa2aa7b73479d9ec9a053fb0dc, type: 2}
@@ -1525,6 +1647,7 @@ MonoBehaviour:
     - {x: 0.5, y: 0, z: 0.5}
     - {x: -0.5, y: 0, z: 0.5}
     - {x: 0, y: 0, z: 1}
+    uvs: []
     tris: f9fffffffafffffffbfffffff9fffffffbfffffffcfffffffdfffffffeffffffffffffff
   - foldedOut: 0
     condition: {fileID: 11400000, guid: 1c6815987e7446946ae5598b4c34cf2d, type: 2}
@@ -1536,6 +1659,7 @@ MonoBehaviour:
     - {x: 0.5, y: 0, z: 0.5}
     - {x: -0.5, y: 0, z: 0.5}
     - {x: 0, y: 0, z: 1}
+    uvs: []
     tris: f9fffffffafffffffbfffffff9fffffffbfffffffcfffffffdfffffffeffffffffffffff
   - foldedOut: 0
     condition: {fileID: 11400000, guid: 3bad9d9aeda9c73449945a0de3dfc3be, type: 2}
@@ -1550,6 +1674,7 @@ MonoBehaviour:
     - {x: 0.5, y: 0, z: 0.5}
     - {x: -0.5, y: 0, z: 0.5}
     - {x: 0, y: 0, z: 1}
+    uvs: []
     tris: f6fffffff7fffffff8fffffff6fffffff8fffffff9fffffffafffffffbfffffffcfffffffdfffffffeffffffffffffff
   - foldedOut: 0
     condition: {fileID: 11400000, guid: ca3dad178f2362541994eca2dfd43dde, type: 2}
@@ -1564,6 +1689,7 @@ MonoBehaviour:
     - {x: 0.5, y: 0, z: 0.5}
     - {x: -0.5, y: 0, z: 0.5}
     - {x: 0, y: 0, z: 1}
+    uvs: []
     tris: f6fffffff7fffffff8fffffff6fffffff8fffffff9fffffffafffffffbfffffffcfffffffdfffffffeffffffffffffff
   - foldedOut: 0
     condition: {fileID: 11400000, guid: 35e4c1deffe28be4a9c913e1c7309b47, type: 2}
@@ -1575,6 +1701,7 @@ MonoBehaviour:
     - {x: 0.5, y: 0, z: 0.5}
     - {x: -0.5, y: 0, z: 0.5}
     - {x: 0, y: 0, z: 1}
+    uvs: []
     tris: f9fffffffafffffffbfffffff9fffffffbfffffffcfffffffdfffffffeffffffffffffff
   - foldedOut: 0
     condition: {fileID: 11400000, guid: 2a703a75b8dac6441b43f1c364b0ee1e, type: 2}
@@ -1586,6 +1713,7 @@ MonoBehaviour:
     - {x: 0.5, y: 0, z: 0.5}
     - {x: -0.5, y: 0, z: 0.5}
     - {x: 0, y: 0, z: 1}
+    uvs: []
     tris: f9fffffffafffffffbfffffff9fffffffbfffffffcfffffffdfffffffeffffffffffffff
   - foldedOut: 0
     condition: {fileID: 11400000, guid: 8f433f933dc78f74f97d026529f0ee62, type: 2}
@@ -1603,6 +1731,7 @@ MonoBehaviour:
     - {x: 0.5, y: 0, z: 0.5}
     - {x: -0.5, y: 0, z: 0.5}
     - {x: 0, y: 0, z: 1}
+    uvs: []
     tris: f3fffffff4fffffff5fffffff3fffffff5fffffff6fffffff7fffffff8fffffff9fffffffafffffffbfffffffcfffffffdfffffffeffffffffffffff
   - foldedOut: 0
     condition: {fileID: 11400000, guid: 0969322e8ea62d946a6aada38024dd96, type: 2}
@@ -1623,6 +1752,7 @@ MonoBehaviour:
     - {x: 0.5, y: 0, z: 0.5}
     - {x: -0.5, y: 0, z: 0.5}
     - {x: 0, y: 0, z: 1}
+    uvs: []
     tris: f0fffffff1fffffff2fffffff0fffffff2fffffff3fffffff4fffffff5fffffff6fffffff7fffffff8fffffff9fffffffafffffffbfffffffcfffffffdfffffffeffffffffffffff
   - foldedOut: 0
     condition: {fileID: 11400000, guid: 80ea47dfd80dec74fbd2ffd5bc410ff7, type: 2}
@@ -1640,6 +1770,7 @@ MonoBehaviour:
     - {x: 0.5, y: 0, z: 0.5}
     - {x: -0.5, y: 0, z: 0.5}
     - {x: 0, y: 0, z: 1}
+    uvs: []
     tris: f3fffffff4fffffff5fffffff3fffffff5fffffff6fffffff7fffffff8fffffff9fffffffafffffffbfffffffcfffffffdfffffffeffffffffffffff
   - foldedOut: 0
     condition: {fileID: 11400000, guid: f35c8531f9acd514fa5c3433484ba999, type: 2}
@@ -1657,6 +1788,7 @@ MonoBehaviour:
     - {x: 0.5, y: 0, z: 0.5}
     - {x: -0.5, y: 0, z: 0.5}
     - {x: 0, y: 0, z: 1}
+    uvs: []
     tris: f3fffffff4fffffff5fffffff3fffffff5fffffff6fffffff7fffffff8fffffff9fffffffafffffffbfffffffcfffffffdfffffffeffffffffffffff
   - foldedOut: 0
     condition: {fileID: 11400000, guid: ce5400bb99f469f41a138f4d0b3a0b5e, type: 2}
@@ -1677,6 +1809,7 @@ MonoBehaviour:
     - {x: 0.5, y: 0, z: 0.5}
     - {x: -0.5, y: 0, z: 0.5}
     - {x: 0, y: 0, z: 1}
+    uvs: []
     tris: f0fffffff1fffffff2fffffff0fffffff2fffffff3fffffff4fffffff5fffffff6fffffff7fffffff8fffffff9fffffffafffffffbfffffffcfffffffdfffffffeffffffffffffff
   - foldedOut: 0
     condition: {fileID: 11400000, guid: 78c2a481b267e364ab4515da1166f23c, type: 2}
@@ -1697,6 +1830,7 @@ MonoBehaviour:
     - {x: 0.5, y: 0, z: 0.5}
     - {x: -0.5, y: 0, z: 0.5}
     - {x: 0, y: 0, z: 1}
+    uvs: []
     tris: f0fffffff1fffffff2fffffff0fffffff2fffffff3fffffff4fffffff5fffffff6fffffff7fffffff8fffffff9fffffffafffffffbfffffffcfffffffdfffffffeffffffffffffff
   - foldedOut: 0
     condition: {fileID: 11400000, guid: ff9f70379bf00134ba0369ab520d4f70, type: 2}
@@ -1714,6 +1848,7 @@ MonoBehaviour:
     - {x: 0.5, y: 0, z: 0.5}
     - {x: -0.5, y: 0, z: 0.5}
     - {x: 0, y: 0, z: 1}
+    uvs: []
     tris: f3fffffff4fffffff5fffffff3fffffff5fffffff6fffffff7fffffff8fffffff9fffffffafffffffbfffffffcfffffffdfffffffeffffffffffffff
   - foldedOut: 0
     condition: {fileID: 11400000, guid: 09759e40021167049a790643061a203b, type: 2}
@@ -1731,6 +1866,7 @@ MonoBehaviour:
     - {x: 0.5, y: 0, z: 0.5}
     - {x: -0.5, y: 0, z: 0.5}
     - {x: 0, y: 0, z: 1}
+    uvs: []
     tris: f3fffffff4fffffff5fffffff3fffffff5fffffff6fffffff7fffffff8fffffff9fffffffafffffffbfffffffcfffffffdfffffffeffffffffffffff
   - foldedOut: 0
     condition: {fileID: 11400000, guid: 3f8a9feb8f9162d4b9a162a5f87676e2, type: 2}
@@ -1745,6 +1881,7 @@ MonoBehaviour:
     - {x: 0.5, y: 0, z: 0.5}
     - {x: -0.5, y: 0, z: 0.5}
     - {x: 0, y: 0, z: 1}
+    uvs: []
     tris: f6fffffff7fffffff8fffffff6fffffff8fffffff9fffffffafffffffbfffffffcfffffffdfffffffeffffffffffffff
   - foldedOut: 0
     condition: {fileID: 11400000, guid: f76ad8f820469e3428ab43e22e59e49a, type: 2}
@@ -1762,6 +1899,7 @@ MonoBehaviour:
     - {x: 0.5, y: 0, z: 0.5}
     - {x: -0.5, y: 0, z: 0.5}
     - {x: 0, y: 0, z: 1}
+    uvs: []
     tris: f3fffffff4fffffff5fffffff3fffffff5fffffff6fffffff7fffffff8fffffff9fffffffafffffffbfffffffcfffffffdfffffffeffffffffffffff
   - foldedOut: 0
     condition: {fileID: 11400000, guid: 6da4024c784d7b040977441ec032fa87, type: 2}
@@ -1776,6 +1914,7 @@ MonoBehaviour:
     - {x: 0.5, y: 0, z: 0.5}
     - {x: -0.5, y: 0, z: 0.5}
     - {x: 0, y: 0, z: 1}
+    uvs: []
     tris: f6fffffff7fffffff8fffffff6fffffff8fffffff9fffffffafffffffbfffffffcfffffffdfffffffeffffffffffffff
   - foldedOut: 0
     condition: {fileID: 11400000, guid: 496b138dad185af409d1fccc266bceb8, type: 2}
@@ -1790,6 +1929,7 @@ MonoBehaviour:
     - {x: 0.5, y: 0, z: 0.5}
     - {x: -0.5, y: 0, z: 0.5}
     - {x: 0, y: 0, z: 1}
+    uvs: []
     tris: f6fffffff7fffffff8fffffff6fffffff8fffffff9fffffffafffffffbfffffffcfffffffdfffffffeffffffffffffff
   - foldedOut: 0
     condition: {fileID: 11400000, guid: 7a2e60d1c78d6d7449d39ab782c66f3a, type: 2}
@@ -1807,6 +1947,7 @@ MonoBehaviour:
     - {x: 0.5, y: 0, z: 0.5}
     - {x: -0.5, y: 0, z: 0.5}
     - {x: 0, y: 0, z: 1}
+    uvs: []
     tris: f3fffffff4fffffff5fffffff3fffffff5fffffff6fffffff7fffffff8fffffff9fffffffafffffffbfffffffcfffffffdfffffffeffffffffffffff
   - foldedOut: 0
     condition: {fileID: 11400000, guid: fe8462c6b5ecd864b8f55034badb271a, type: 2}
@@ -1824,6 +1965,7 @@ MonoBehaviour:
     - {x: 0.5, y: 0, z: 0.5}
     - {x: -0.5, y: 0, z: 0.5}
     - {x: 0, y: 0, z: 1}
+    uvs: []
     tris: f3fffffff4fffffff5fffffff3fffffff5fffffff6fffffff7fffffff8fffffff9fffffffafffffffbfffffffcfffffffdfffffffeffffffffffffff
   - foldedOut: 0
     condition: {fileID: 11400000, guid: b260928731eb6b34c9147e92af095a49, type: 2}
@@ -1838,6 +1980,7 @@ MonoBehaviour:
     - {x: 0.5, y: 0, z: 0.5}
     - {x: -0.5, y: 0, z: 0.5}
     - {x: 0, y: 0, z: 1}
+    uvs: []
     tris: f6fffffff7fffffff8fffffff6fffffff8fffffff9fffffffafffffffbfffffffcfffffffdfffffffeffffffffffffff
   - foldedOut: 0
     condition: {fileID: 11400000, guid: 8626e86d2168b2e48adb14fddbcdb308, type: 2}
@@ -1852,6 +1995,7 @@ MonoBehaviour:
     - {x: 0.5, y: 0, z: 0.5}
     - {x: -0.5, y: 0, z: 0.5}
     - {x: 0, y: 0, z: 1}
+    uvs: []
     tris: f6fffffff7fffffff8fffffff6fffffff8fffffff9fffffffafffffffbfffffffcfffffffdfffffffeffffffffffffff
   - foldedOut: 0
     condition: {fileID: 11400000, guid: be13d614e0c68af4b926d413a9ea64bf, type: 2}
@@ -1866,6 +2010,7 @@ MonoBehaviour:
     - {x: 0.5, y: 0, z: 0.5}
     - {x: -0.5, y: 0, z: 0.5}
     - {x: 0, y: 0, z: 1}
+    uvs: []
     tris: f6fffffff7fffffff8fffffff6fffffff8fffffff9fffffffafffffffbfffffffcfffffffdfffffffeffffffffffffff
   - foldedOut: 0
     condition: {fileID: 11400000, guid: 0a450e343d2633d4abcff2904705f50a, type: 2}
@@ -1883,6 +2028,7 @@ MonoBehaviour:
     - {x: 0.5, y: 0, z: 0.5}
     - {x: -0.5, y: 0, z: 0.5}
     - {x: 0, y: 0, z: 1}
+    uvs: []
     tris: f3fffffff4fffffff5fffffff3fffffff5fffffff6fffffff7fffffff8fffffff9fffffffafffffffbfffffffcfffffffdfffffffeffffffffffffff
   - foldedOut: 0
     condition: {fileID: 11400000, guid: f31a7bc19b8825540bbebc39a5385818, type: 2}
@@ -1897,6 +2043,7 @@ MonoBehaviour:
     - {x: 0.5, y: 0, z: 0.5}
     - {x: -0.5, y: 0, z: 0.5}
     - {x: 0, y: 0, z: 1}
+    uvs: []
     tris: f6fffffff7fffffff8fffffff6fffffff8fffffff9fffffffafffffffbfffffffcfffffffdfffffffeffffffffffffff
   - foldedOut: 0
     condition: {fileID: 11400000, guid: db4d26d8f9dbfd44f853d873ecc5c975, type: 2}
@@ -1911,6 +2058,7 @@ MonoBehaviour:
     - {x: 0.5, y: 0, z: 0.5}
     - {x: -0.5, y: 0, z: 0.5}
     - {x: 0, y: 0, z: 1}
+    uvs: []
     tris: f6fffffff7fffffff8fffffff6fffffff8fffffff9fffffffafffffffbfffffffcfffffffdfffffffeffffffffffffff
   - foldedOut: 0
     condition: {fileID: 11400000, guid: e889be15a130d6a44919c69065ccfa1d, type: 2}
@@ -1928,6 +2076,7 @@ MonoBehaviour:
     - {x: 0.5, y: 0, z: 0.5}
     - {x: -0.5, y: 0, z: 0.5}
     - {x: 0, y: 0, z: 1}
+    uvs: []
     tris: f3fffffff4fffffff5fffffff3fffffff5fffffff6fffffff7fffffff8fffffff9fffffffafffffffbfffffffcfffffffdfffffffeffffffffffffff
   - foldedOut: 0
     condition: {fileID: 11400000, guid: 9d80fcff2d13ab54abcdac81f6df72c8, type: 2}
@@ -1945,6 +2094,7 @@ MonoBehaviour:
     - {x: 0.5, y: 0, z: 0.5}
     - {x: -0.5, y: 0, z: 0.5}
     - {x: 0, y: 0, z: 1}
+    uvs: []
     tris: f3fffffff4fffffff5fffffff3fffffff5fffffff6fffffff7fffffff8fffffff9fffffffafffffffbfffffffcfffffffdfffffffeffffffffffffff
   - foldedOut: 0
     condition: {fileID: 11400000, guid: 726323d467cd0c74dbf96be877d3ef87, type: 2}
@@ -1959,6 +2109,7 @@ MonoBehaviour:
     - {x: 0.5, y: 0, z: 0.5}
     - {x: -0.5, y: 0, z: 0.5}
     - {x: 0, y: 0, z: 1}
+    uvs: []
     tris: f6fffffff7fffffff8fffffff6fffffff8fffffff9fffffffafffffffbfffffffcfffffffdfffffffeffffffffffffff
   - foldedOut: 0
     condition: {fileID: 11400000, guid: a5184878d832e384d9a8beb8e8564d97, type: 2}
@@ -1973,6 +2124,7 @@ MonoBehaviour:
     - {x: 0.5, y: 0, z: 0.5}
     - {x: -0.5, y: 0, z: 0.5}
     - {x: 0, y: 0, z: 1}
+    uvs: []
     tris: f6fffffff7fffffff8fffffff6fffffff8fffffff9fffffffafffffffbfffffffcfffffffdfffffffeffffffffffffff
   - foldedOut: 0
     condition: {fileID: 11400000, guid: 21b4e95c0f988954c8382db7b676cf6c, type: 2}
@@ -1984,6 +2136,7 @@ MonoBehaviour:
     - {x: 0.5, y: 0, z: 0.5}
     - {x: -0.5, y: 0, z: 0.5}
     - {x: 0, y: 0, z: 1}
+    uvs: []
     tris: f9fffffffafffffffbfffffff9fffffffbfffffffcfffffffdfffffffeffffffffffffff
   - foldedOut: 0
     condition: {fileID: 11400000, guid: f76bada5b41891643887864b5fb137ac, type: 2}
@@ -1998,6 +2151,7 @@ MonoBehaviour:
     - {x: 0.5, y: 0, z: 0.5}
     - {x: -0.5, y: 0, z: 0.5}
     - {x: 0, y: 0, z: 1}
+    uvs: []
     tris: f6fffffff7fffffff8fffffff6fffffff8fffffff9fffffffafffffffbfffffffcfffffffdfffffffeffffffffffffff
   - foldedOut: 0
     condition: {fileID: 11400000, guid: 1d96d05a839413a4ea6195d67be56fd6, type: 2}
@@ -2009,6 +2163,7 @@ MonoBehaviour:
     - {x: 0.5, y: 0, z: 0.5}
     - {x: -0.5, y: 0, z: 0.5}
     - {x: 0, y: 0, z: 1}
+    uvs: []
     tris: f9fffffffafffffffbfffffff9fffffffbfffffffcfffffffdfffffffeffffffffffffff
   - foldedOut: 0
     condition: {fileID: 11400000, guid: 685aa94cf3643094ea66a6cedb7f347c, type: 2}
@@ -2020,6 +2175,7 @@ MonoBehaviour:
     - {x: 0.5, y: 0, z: 0.5}
     - {x: -0.5, y: 0, z: 0.5}
     - {x: 0, y: 0, z: 1}
+    uvs: []
     tris: f9fffffffafffffffbfffffff9fffffffbfffffffcfffffffdfffffffeffffffffffffff
   - foldedOut: 0
     condition: {fileID: 11400000, guid: 1f25c91b8ca9f2d47a80f74cec6431fd, type: 2}
@@ -2034,6 +2190,7 @@ MonoBehaviour:
     - {x: 0.5, y: 0, z: 0.5}
     - {x: -0.5, y: 0, z: 0.5}
     - {x: 0, y: 0, z: 1}
+    uvs: []
     tris: f6fffffff7fffffff8fffffff6fffffff8fffffff9fffffffafffffffbfffffffcfffffffdfffffffeffffffffffffff
   - foldedOut: 0
     condition: {fileID: 11400000, guid: 22822d02dc2422541a95854f47fa9b01, type: 2}
@@ -2048,6 +2205,7 @@ MonoBehaviour:
     - {x: 0.5, y: 0, z: 0.5}
     - {x: -0.5, y: 0, z: 0.5}
     - {x: 0, y: 0, z: 1}
+    uvs: []
     tris: f6fffffff7fffffff8fffffff6fffffff8fffffff9fffffffafffffffbfffffffcfffffffdfffffffeffffffffffffff
   - foldedOut: 0
     condition: {fileID: 11400000, guid: 9ac7ff526e2c4c14482f08628fac0370, type: 2}
@@ -2059,6 +2217,7 @@ MonoBehaviour:
     - {x: 0.5, y: 0, z: 0.5}
     - {x: -0.5, y: 0, z: 0.5}
     - {x: 0, y: 0, z: 1}
+    uvs: []
     tris: f9fffffffafffffffbfffffff9fffffffbfffffffcfffffffdfffffffeffffffffffffff
   - foldedOut: 0
     condition: {fileID: 11400000, guid: 47c7f143864fe4e499c7c0cc9a1a1d15, type: 2}
@@ -2070,6 +2229,7 @@ MonoBehaviour:
     - {x: 0.5, y: 0, z: 0.5}
     - {x: -0.5, y: 0, z: 0.5}
     - {x: 0, y: 0, z: 1}
+    uvs: []
     tris: f9fffffffafffffffbfffffff9fffffffbfffffffcfffffffdfffffffeffffffffffffff
   - foldedOut: 0
     condition: {fileID: 11400000, guid: fe2b8eb7a8c16e04287912f6f21265a2, type: 2}
@@ -2081,6 +2241,7 @@ MonoBehaviour:
     - {x: 1, y: 0, z: 0}
     - {x: 0.5, y: 0, z: -0.5}
     - {x: 0.5, y: 0, z: 0.5}
+    uvs: []
     tris: f9fffffffafffffffbfffffff9fffffffbfffffffcfffffffdfffffffeffffffffffffff
   - foldedOut: 0
     condition: {fileID: 11400000, guid: 02a050189b92f2d428b7680fb9697f5a, type: 2}
@@ -2098,6 +2259,7 @@ MonoBehaviour:
     - {x: 1, y: 0, z: 0}
     - {x: 0.5, y: 0, z: -0.5}
     - {x: 0.5, y: 0, z: 0.5}
+    uvs: []
     tris: f3fffffff4fffffff5fffffff3fffffff5fffffff6fffffff7fffffff8fffffff9fffffffafffffffbfffffffcfffffffdfffffffeffffffffffffff
   - foldedOut: 0
     condition: {fileID: 11400000, guid: 3dee015f0ce51b243a7e81fbd211ae1f, type: 2}
@@ -2109,6 +2271,7 @@ MonoBehaviour:
     - {x: 1, y: 0, z: 0}
     - {x: 0.5, y: 0, z: -0.5}
     - {x: 0.5, y: 0, z: 0.5}
+    uvs: []
     tris: f9fffffffafffffffbfffffff9fffffffbfffffffcfffffffdfffffffeffffffffffffff
   - foldedOut: 0
     condition: {fileID: 11400000, guid: 41bfa79f85341ae4d978f8dca36965f6, type: 2}
@@ -2123,6 +2286,7 @@ MonoBehaviour:
     - {x: 1, y: 0, z: 0}
     - {x: 0.5, y: 0, z: -0.5}
     - {x: 0.5, y: 0, z: 0.5}
+    uvs: []
     tris: f6fffffff7fffffff8fffffff6fffffff8fffffff9fffffffafffffffbfffffffcfffffffdfffffffeffffffffffffff
   - foldedOut: 0
     condition: {fileID: 11400000, guid: 51daa16cd81d51844b65b47acb15f93e, type: 2}
@@ -2137,6 +2301,7 @@ MonoBehaviour:
     - {x: 1, y: 0, z: 0}
     - {x: 0.5, y: 0, z: -0.5}
     - {x: 0.5, y: 0, z: 0.5}
+    uvs: []
     tris: f6fffffff7fffffff8fffffff6fffffff8fffffff9fffffffafffffffbfffffffcfffffffdfffffffeffffffffffffff
   - foldedOut: 0
     condition: {fileID: 11400000, guid: fb06be5009b101e48bf2eae69410de78, type: 2}
@@ -2154,6 +2319,7 @@ MonoBehaviour:
     - {x: 1, y: 0, z: 0}
     - {x: 0.5, y: 0, z: -0.5}
     - {x: 0.5, y: 0, z: 0.5}
+    uvs: []
     tris: f3fffffff4fffffff5fffffff3fffffff5fffffff6fffffff7fffffff8fffffff9fffffffafffffffbfffffffcfffffffdfffffffeffffffffffffff
   - foldedOut: 0
     condition: {fileID: 11400000, guid: 8734795e86b517f49ab4da0b17a8e1f5, type: 2}
@@ -2165,6 +2331,7 @@ MonoBehaviour:
     - {x: 1, y: 0, z: 0}
     - {x: 0.5, y: 0, z: -0.5}
     - {x: 0.5, y: 0, z: 0.5}
+    uvs: []
     tris: f9fffffffafffffffbfffffff9fffffffbfffffffcfffffffdfffffffeffffffffffffff
   - foldedOut: 0
     condition: {fileID: 11400000, guid: 5cbd51b9f7a188d48abfaa3fbc9f9c37, type: 2}
@@ -2179,6 +2346,7 @@ MonoBehaviour:
     - {x: 1, y: 0, z: 0}
     - {x: 0.5, y: 0, z: -0.5}
     - {x: 0.5, y: 0, z: 0.5}
+    uvs: []
     tris: f6fffffff7fffffff8fffffff6fffffff8fffffff9fffffffafffffffbfffffffcfffffffdfffffffeffffffffffffff
   - foldedOut: 0
     condition: {fileID: 11400000, guid: ff3e3f8c7f5e8094d96d68bbb9ba6d8c, type: 2}
@@ -2190,6 +2358,7 @@ MonoBehaviour:
     - {x: 1, y: 0, z: 0}
     - {x: 0.5, y: 0, z: -0.5}
     - {x: 0.5, y: 0, z: 0.5}
+    uvs: []
     tris: f9fffffffafffffffbfffffff9fffffffbfffffffcfffffffdfffffffeffffffffffffff
   - foldedOut: 0
     condition: {fileID: 11400000, guid: bcf38acbc31fb594bb42c05fd92c8906, type: 2}
@@ -2204,6 +2373,7 @@ MonoBehaviour:
     - {x: 1, y: 0, z: 0}
     - {x: 0.5, y: 0, z: -0.5}
     - {x: 0.5, y: 0, z: 0.5}
+    uvs: []
     tris: f6fffffff7fffffff8fffffff6fffffff8fffffff9fffffffafffffffbfffffffcfffffffdfffffffeffffffffffffff
   - foldedOut: 0
     condition: {fileID: 11400000, guid: 123ac5d072d12474db2cdbbe70e548b7, type: 2}
@@ -2215,6 +2385,7 @@ MonoBehaviour:
     - {x: 1, y: 0, z: 0}
     - {x: 0.5, y: 0, z: -0.5}
     - {x: 0.5, y: 0, z: 0.5}
+    uvs: []
     tris: f9fffffffafffffffbfffffff9fffffffbfffffffcfffffffdfffffffeffffffffffffff
   - foldedOut: 0
     condition: {fileID: 11400000, guid: 0e18398987f85f74c9d60226c61c63ed, type: 2}
@@ -2226,6 +2397,7 @@ MonoBehaviour:
     - {x: 1, y: 0, z: 0}
     - {x: 0.5, y: 0, z: -0.5}
     - {x: 0.5, y: 0, z: 0.5}
+    uvs: []
     tris: f9fffffffafffffffbfffffff9fffffffbfffffffcfffffffdfffffffeffffffffffffff
   - foldedOut: 0
     condition: {fileID: 11400000, guid: b0c8ebdec8b455d4f8345b90cd38b403, type: 2}
@@ -2240,6 +2412,7 @@ MonoBehaviour:
     - {x: 1, y: 0, z: 0}
     - {x: 0.5, y: 0, z: -0.5}
     - {x: 0.5, y: 0, z: 0.5}
+    uvs: []
     tris: f6fffffff7fffffff8fffffff6fffffff8fffffff9fffffffafffffffbfffffffcfffffffdfffffffeffffffffffffff
   - foldedOut: 0
     condition: {fileID: 11400000, guid: f0da36317432d4e45880470dbdd24fec, type: 2}
@@ -2254,6 +2427,7 @@ MonoBehaviour:
     - {x: 1, y: 0, z: 0}
     - {x: 0.5, y: 0, z: -0.5}
     - {x: 0.5, y: 0, z: 0.5}
+    uvs: []
     tris: f6fffffff7fffffff8fffffff6fffffff8fffffff9fffffffafffffffbfffffffcfffffffdfffffffeffffffffffffff
   - foldedOut: 0
     condition: {fileID: 11400000, guid: 376691ac594e6404fa25020166dab5ef, type: 2}
@@ -2265,6 +2439,7 @@ MonoBehaviour:
     - {x: 1, y: 0, z: 0}
     - {x: 0.5, y: 0, z: -0.5}
     - {x: 0.5, y: 0, z: 0.5}
+    uvs: []
     tris: f9fffffffafffffffbfffffff9fffffffbfffffffcfffffffdfffffffeffffffffffffff
   - foldedOut: 0
     condition: {fileID: 11400000, guid: df2c55e9970e76c4cbaf285b9713db50, type: 2}
@@ -2276,6 +2451,7 @@ MonoBehaviour:
     - {x: 1, y: 0, z: 0}
     - {x: 0.5, y: 0, z: -0.5}
     - {x: 0.5, y: 0, z: 0.5}
+    uvs: []
     tris: f9fffffffafffffffbfffffff9fffffffbfffffffcfffffffdfffffffeffffffffffffff
   - foldedOut: 0
     condition: {fileID: 11400000, guid: 572c7c6df34b3244590eb6f7e9f0024f, type: 2}
@@ -2284,6 +2460,7 @@ MonoBehaviour:
     - {x: -0.5, y: 0, z: -0.5}
     - {x: -0.5, y: 0, z: 0.5}
     - {x: 0.5, y: 0, z: 0.5}
+    uvs: []
     tris: fcfffffffdfffffffefffffffcfffffffeffffffffffffff
   - foldedOut: 0
     condition: {fileID: 11400000, guid: 6b5e150aace195e41b26c3a565abea29, type: 2}
@@ -2298,6 +2475,7 @@ MonoBehaviour:
     - {x: -0.5, y: 0, z: -0.5}
     - {x: -1, y: 0, z: 0}
     - {x: -0.5, y: 0, z: 0.5}
+    uvs: []
     tris: f6fffffff7fffffff8fffffff6fffffff8fffffff9fffffffafffffffbfffffffcfffffffdfffffffeffffffffffffff
   - foldedOut: 0
     condition: {fileID: 11400000, guid: 320a295bd097d5f45a9756f68aea719b, type: 2}
@@ -2306,6 +2484,7 @@ MonoBehaviour:
     - {x: -0.5, y: 0, z: -0.5}
     - {x: -0.5, y: 0, z: 0.5}
     - {x: 0.5, y: 0, z: 0.5}
+    uvs: []
     tris: fcfffffffdfffffffefffffffcfffffffeffffffffffffff
   - foldedOut: 0
     condition: {fileID: 11400000, guid: 1ab43646b13c57b439f934a64f1fde67, type: 2}
@@ -2317,6 +2496,7 @@ MonoBehaviour:
     - {x: -0.5, y: 0, z: -0.5}
     - {x: -1, y: 0, z: 0}
     - {x: -0.5, y: 0, z: 0.5}
+    uvs: []
     tris: f9fffffffafffffffbfffffff9fffffffbfffffffcfffffffdfffffffeffffffffffffff
   - foldedOut: 0
     condition: {fileID: 11400000, guid: 5d15d078526a4e5498079109e6b69ac2, type: 2}
@@ -2328,6 +2508,7 @@ MonoBehaviour:
     - {x: 0.5, y: 0, z: -0.5}
     - {x: 0, y: 0, z: -1}
     - {x: -0.5, y: 0, z: -0.5}
+    uvs: []
     tris: f9fffffffafffffffbfffffff9fffffffbfffffffcfffffffdfffffffeffffffffffffff
   - foldedOut: 0
     condition: {fileID: 11400000, guid: 64174acf741976d4ab206f365dd59153, type: 2}
@@ -2342,6 +2523,7 @@ MonoBehaviour:
     - {x: -0.5, y: 0, z: -0.5}
     - {x: -1, y: 0, z: 0}
     - {x: -0.5, y: 0, z: 0.5}
+    uvs: []
     tris: f6fffffff7fffffff8fffffff6fffffff8fffffff9fffffffafffffffbfffffffcfffffffdfffffffeffffffffffffff
   - foldedOut: 0
     condition: {fileID: 11400000, guid: 916baa1470e8dc84a91d2f4f56ad75eb, type: 2}
@@ -2350,6 +2532,7 @@ MonoBehaviour:
     - {x: -0.5, y: 0, z: -0.5}
     - {x: -0.5, y: 0, z: 0.5}
     - {x: 0.5, y: 0, z: 0.5}
+    uvs: []
     tris: fcfffffffdfffffffefffffffcfffffffeffffffffffffff
   - foldedOut: 0
     condition: {fileID: 11400000, guid: 9d17d7f9f7247094296ec950e69f4eff, type: 2}
@@ -2361,6 +2544,7 @@ MonoBehaviour:
     - {x: -0.5, y: 0, z: -0.5}
     - {x: -1, y: 0, z: 0}
     - {x: -0.5, y: 0, z: 0.5}
+    uvs: []
     tris: f9fffffffafffffffbfffffff9fffffffbfffffffcfffffffdfffffffeffffffffffffff
   - foldedOut: 0
     condition: {fileID: 11400000, guid: 2f1df513c82658444848ac78f8f37b89, type: 2}
@@ -2369,6 +2553,7 @@ MonoBehaviour:
     - {x: -0.5, y: 0, z: -0.5}
     - {x: -0.5, y: 0, z: 0.5}
     - {x: 0.5, y: 0, z: 0.5}
+    uvs: []
     tris: fcfffffffdfffffffefffffffcfffffffeffffffffffffff
   - foldedOut: 0
     condition: {fileID: 11400000, guid: 3d6657f9b45012f4ca034842820495d7, type: 2}
@@ -2380,6 +2565,7 @@ MonoBehaviour:
     - {x: 0.5, y: 0, z: -0.5}
     - {x: 0, y: 0, z: -1}
     - {x: -0.5, y: 0, z: -0.5}
+    uvs: []
     tris: f9fffffffafffffffbfffffff9fffffffbfffffffcfffffffdfffffffeffffffffffffff
   - foldedOut: 0
     condition: {fileID: 11400000, guid: 5801a39e00cc61b4b8805f14da6b32e9, type: 2}
@@ -2388,6 +2574,7 @@ MonoBehaviour:
     - {x: -0.5, y: 0, z: -0.5}
     - {x: -0.5, y: 0, z: 0.5}
     - {x: 0.5, y: 0, z: 0.5}
+    uvs: []
     tris: fcfffffffdfffffffefffffffcfffffffeffffffffffffff
   - foldedOut: 0
     condition: {fileID: 11400000, guid: ef662942ed630bf428fd43f1aeaa157f, type: 2}
@@ -2396,6 +2583,7 @@ MonoBehaviour:
     - {x: -0.5, y: 0, z: -0.5}
     - {x: -0.5, y: 0, z: 0.5}
     - {x: 0.5, y: 0, z: 0.5}
+    uvs: []
     tris: fcfffffffdfffffffefffffffcfffffffeffffffffffffff
   - foldedOut: 0
     condition: {fileID: 11400000, guid: 52d7c7417a094974aae13f9fc7a3dfac, type: 2}
@@ -2407,6 +2595,7 @@ MonoBehaviour:
     - {x: 0.5, y: 0, z: -0.5}
     - {x: 0, y: 0, z: -1}
     - {x: -0.5, y: 0, z: -0.5}
+    uvs: []
     tris: f9fffffffafffffffbfffffff9fffffffbfffffffcfffffffdfffffffeffffffffffffff
   - foldedOut: 0
     condition: {fileID: 11400000, guid: e8355afb38f4bb24782cd901047b2818, type: 2}
@@ -2418,6 +2607,7 @@ MonoBehaviour:
     - {x: 0.5, y: 0, z: -0.5}
     - {x: 0, y: 0, z: -1}
     - {x: -0.5, y: 0, z: -0.5}
+    uvs: []
     tris: f9fffffffafffffffbfffffff9fffffffbfffffffcfffffffdfffffffeffffffffffffff
   - foldedOut: 0
     condition: {fileID: 11400000, guid: 96c56a0e12014e3449f3104866e7234b, type: 2}
@@ -2426,6 +2616,7 @@ MonoBehaviour:
     - {x: -0.5, y: 0, z: -0.5}
     - {x: -0.5, y: 0, z: 0.5}
     - {x: 0.5, y: 0, z: 0.5}
+    uvs: []
     tris: fcfffffffdfffffffefffffffcfffffffeffffffffffffff
   - foldedOut: 0
     condition: {fileID: 11400000, guid: d8b9330a676a6d740b5dca8e5c99ceed, type: 2}
@@ -2434,6 +2625,7 @@ MonoBehaviour:
     - {x: -0.5, y: 0, z: -0.5}
     - {x: -0.5, y: 0, z: 0.5}
     - {x: 0.5, y: 0, z: 0.5}
+    uvs: []
     tris: fcfffffffdfffffffefffffffcfffffffeffffffffffffff
   - foldedOut: 0
     condition: {fileID: 11400000, guid: 3b9cac2c116a7a940b7ed138d48a0ade, type: 2}
@@ -2448,6 +2640,7 @@ MonoBehaviour:
     - {x: 1, y: 0, z: 0}
     - {x: 0.5, y: 0, z: -0.5}
     - {x: 0.5, y: 0, z: 0.5}
+    uvs: []
     tris: f6fffffff7fffffff8fffffff6fffffff8fffffff9fffffffafffffffbfffffffcfffffffdfffffffeffffffffffffff
   - foldedOut: 0
     condition: {fileID: 11400000, guid: 2fa77639d707106409851d8e00d491e9, type: 2}
@@ -2465,6 +2658,7 @@ MonoBehaviour:
     - {x: 1, y: 0, z: 0}
     - {x: 0.5, y: 0, z: -0.5}
     - {x: 0.5, y: 0, z: 0.5}
+    uvs: []
     tris: f3fffffff4fffffff5fffffff3fffffff5fffffff6fffffff7fffffff8fffffff9fffffffafffffffbfffffffcfffffffdfffffffeffffffffffffff
   - foldedOut: 0
     condition: {fileID: 11400000, guid: 9ebc1aa596d945b4ba4c4478f8f251ac, type: 2}
@@ -2479,6 +2673,7 @@ MonoBehaviour:
     - {x: 1, y: 0, z: 0}
     - {x: 0.5, y: 0, z: -0.5}
     - {x: 0.5, y: 0, z: 0.5}
+    uvs: []
     tris: f6fffffff7fffffff8fffffff6fffffff8fffffff9fffffffafffffffbfffffffcfffffffdfffffffeffffffffffffff
   - foldedOut: 0
     condition: {fileID: 11400000, guid: 74dad38188caf3c428d47317a8e59906, type: 2}
@@ -2493,6 +2688,7 @@ MonoBehaviour:
     - {x: 1, y: 0, z: 0}
     - {x: 0.5, y: 0, z: -0.5}
     - {x: 0.5, y: 0, z: 0.5}
+    uvs: []
     tris: f6fffffff7fffffff8fffffff6fffffff8fffffff9fffffffafffffffbfffffffcfffffffdfffffffeffffffffffffff
   - foldedOut: 0
     condition: {fileID: 11400000, guid: 081b89b81e833fe4d9be0fe6c36c927f, type: 2}
@@ -2510,6 +2706,7 @@ MonoBehaviour:
     - {x: 1, y: 0, z: 0}
     - {x: 0.5, y: 0, z: -0.5}
     - {x: 0.5, y: 0, z: 0.5}
+    uvs: []
     tris: f3fffffff4fffffff5fffffff3fffffff5fffffff6fffffff7fffffff8fffffff9fffffffafffffffbfffffffcfffffffdfffffffeffffffffffffff
   - foldedOut: 0
     condition: {fileID: 11400000, guid: 8d02f73e7cc53f5429d4bae6da047fa8, type: 2}
@@ -2527,6 +2724,7 @@ MonoBehaviour:
     - {x: 1, y: 0, z: 0}
     - {x: 0.5, y: 0, z: -0.5}
     - {x: 0.5, y: 0, z: 0.5}
+    uvs: []
     tris: f3fffffff4fffffff5fffffff3fffffff5fffffff6fffffff7fffffff8fffffff9fffffffafffffffbfffffffcfffffffdfffffffeffffffffffffff
   - foldedOut: 0
     condition: {fileID: 11400000, guid: 0ff408fbad905d04ea295602117b8fcb, type: 2}
@@ -2541,6 +2739,7 @@ MonoBehaviour:
     - {x: 1, y: 0, z: 0}
     - {x: 0.5, y: 0, z: -0.5}
     - {x: 0.5, y: 0, z: 0.5}
+    uvs: []
     tris: f6fffffff7fffffff8fffffff6fffffff8fffffff9fffffffafffffffbfffffffcfffffffdfffffffeffffffffffffff
   - foldedOut: 0
     condition: {fileID: 11400000, guid: 73d40e0f59a7165498bfdf03217b2b22, type: 2}
@@ -2555,6 +2754,7 @@ MonoBehaviour:
     - {x: 1, y: 0, z: 0}
     - {x: 0.5, y: 0, z: -0.5}
     - {x: 0.5, y: 0, z: 0.5}
+    uvs: []
     tris: f6fffffff7fffffff8fffffff6fffffff8fffffff9fffffffafffffffbfffffffcfffffffdfffffffeffffffffffffff
   - foldedOut: 0
     condition: {fileID: 11400000, guid: fe9b6f152256a014bbca977dbe32e337, type: 2}
@@ -2566,6 +2766,7 @@ MonoBehaviour:
     - {x: 1, y: 0, z: 0}
     - {x: 0.5, y: 0, z: -0.5}
     - {x: 0.5, y: 0, z: 0.5}
+    uvs: []
     tris: f9fffffffafffffffbfffffff9fffffffbfffffffcfffffffdfffffffeffffffffffffff
   - foldedOut: 0
     condition: {fileID: 11400000, guid: dceaa25cfd4c97f40925c64fcd0dbba7, type: 2}
@@ -2580,6 +2781,7 @@ MonoBehaviour:
     - {x: 1, y: 0, z: 0}
     - {x: 0.5, y: 0, z: -0.5}
     - {x: 0.5, y: 0, z: 0.5}
+    uvs: []
     tris: f6fffffff7fffffff8fffffff6fffffff8fffffff9fffffffafffffffbfffffffcfffffffdfffffffeffffffffffffff
   - foldedOut: 0
     condition: {fileID: 11400000, guid: 0b0723e3a3c86ee45977448effc0c9e7, type: 2}
@@ -2591,6 +2793,7 @@ MonoBehaviour:
     - {x: 1, y: 0, z: 0}
     - {x: 0.5, y: 0, z: -0.5}
     - {x: 0.5, y: 0, z: 0.5}
+    uvs: []
     tris: f9fffffffafffffffbfffffff9fffffffbfffffffcfffffffdfffffffeffffffffffffff
   - foldedOut: 0
     condition: {fileID: 11400000, guid: 66e9c6c0a9cebd04d96cd0efa9aac509, type: 2}
@@ -2602,6 +2805,7 @@ MonoBehaviour:
     - {x: 1, y: 0, z: 0}
     - {x: 0.5, y: 0, z: -0.5}
     - {x: 0.5, y: 0, z: 0.5}
+    uvs: []
     tris: f9fffffffafffffffbfffffff9fffffffbfffffffcfffffffdfffffffeffffffffffffff
   - foldedOut: 0
     condition: {fileID: 11400000, guid: 9fbb3f99cd5a835469dee7034f030770, type: 2}
@@ -2616,6 +2820,7 @@ MonoBehaviour:
     - {x: 1, y: 0, z: 0}
     - {x: 0.5, y: 0, z: -0.5}
     - {x: 0.5, y: 0, z: 0.5}
+    uvs: []
     tris: f6fffffff7fffffff8fffffff6fffffff8fffffff9fffffffafffffffbfffffffcfffffffdfffffffeffffffffffffff
   - foldedOut: 0
     condition: {fileID: 11400000, guid: 519cecf7de2cdfb41a1b0eec4fcaa9d1, type: 2}
@@ -2630,6 +2835,7 @@ MonoBehaviour:
     - {x: 1, y: 0, z: 0}
     - {x: 0.5, y: 0, z: -0.5}
     - {x: 0.5, y: 0, z: 0.5}
+    uvs: []
     tris: f6fffffff7fffffff8fffffff6fffffff8fffffff9fffffffafffffffbfffffffcfffffffdfffffffeffffffffffffff
   - foldedOut: 0
     condition: {fileID: 11400000, guid: 5484779d894173f4998ad84eb0214e88, type: 2}
@@ -2641,6 +2847,7 @@ MonoBehaviour:
     - {x: 1, y: 0, z: 0}
     - {x: 0.5, y: 0, z: -0.5}
     - {x: 0.5, y: 0, z: 0.5}
+    uvs: []
     tris: f9fffffffafffffffbfffffff9fffffffbfffffffcfffffffdfffffffeffffffffffffff
   - foldedOut: 0
     condition: {fileID: 11400000, guid: 7330066376ba60a4f88bcb23686305e4, type: 2}
@@ -2652,6 +2859,7 @@ MonoBehaviour:
     - {x: 1, y: 0, z: 0}
     - {x: 0.5, y: 0, z: -0.5}
     - {x: 0.5, y: 0, z: 0.5}
+    uvs: []
     tris: f9fffffffafffffffbfffffff9fffffffbfffffffcfffffffdfffffffeffffffffffffff
   - foldedOut: 0
     condition: {fileID: 11400000, guid: 43cf8f2985fe63c468a5e3fd68197756, type: 2}
@@ -2659,6 +2867,7 @@ MonoBehaviour:
     - {x: 0.5, y: 0, z: 0.5}
     - {x: 0.5, y: 0, z: -0.5}
     - {x: 0, y: 0, z: 0}
+    uvs: []
     tris: fdfffffffeffffffffffffff
   - foldedOut: 0
     condition: {fileID: 11400000, guid: 0db98dfe6030a454f9e472f18c82ae77, type: 2}
@@ -2673,6 +2882,7 @@ MonoBehaviour:
     - {x: -0.5, y: 0, z: -0.5}
     - {x: -1, y: 0, z: 0}
     - {x: -0.5, y: 0, z: 0.5}
+    uvs: []
     tris: f6fffffff7fffffff8fffffff6fffffff8fffffff9fffffffafffffffbfffffffcfffffffdfffffffeffffffffffffff
   - foldedOut: 0
     condition: {fileID: 11400000, guid: b199092044c0d5b4f9d9f495e6e67b73, type: 2}
@@ -2684,6 +2894,7 @@ MonoBehaviour:
     - {x: -0.5, y: 0, z: -0.5}
     - {x: -1, y: 0, z: 0}
     - {x: -0.5, y: 0, z: 0.5}
+    uvs: []
     tris: f9fffffffafffffffbfffffff9fffffffbfffffffcfffffffdfffffffeffffffffffffff
   - foldedOut: 0
     condition: {fileID: 11400000, guid: 6c283a11fed14a645816bec45ee27098, type: 2}
@@ -2698,6 +2909,7 @@ MonoBehaviour:
     - {x: -0.5, y: 0, z: -0.5}
     - {x: -1, y: 0, z: 0}
     - {x: -0.5, y: 0, z: 0.5}
+    uvs: []
     tris: f6fffffff7fffffff8fffffff6fffffff8fffffff9fffffffafffffffbfffffffcfffffffdfffffffeffffffffffffff
   - foldedOut: 0
     condition: {fileID: 11400000, guid: 281bf2d8a363761459a960beb61251de, type: 2}
@@ -2709,6 +2921,7 @@ MonoBehaviour:
     - {x: -0.5, y: 0, z: -0.5}
     - {x: -1, y: 0, z: 0}
     - {x: -0.5, y: 0, z: 0.5}
+    uvs: []
     tris: f9fffffffafffffffbfffffff9fffffffbfffffffcfffffffdfffffffeffffffffffffff
   - foldedOut: 0
     condition: {fileID: 11400000, guid: 358915ea9d0d14947bd075eca57ce4d7, type: 2}
@@ -2720,6 +2933,7 @@ MonoBehaviour:
     - {x: -0.5, y: 0, z: -0.5}
     - {x: -1, y: 0, z: 0}
     - {x: -0.5, y: 0, z: 0.5}
+    uvs: []
     tris: f9fffffffafffffffbfffffff9fffffffbfffffffcfffffffdfffffffeffffffffffffff
   - foldedOut: 0
     condition: {fileID: 11400000, guid: 2a9f9f14d37e9214f82ad1c683204ade, type: 2}
@@ -2728,6 +2942,7 @@ MonoBehaviour:
     - {x: -0.5, y: 0, z: -0.5}
     - {x: -0.5, y: 0, z: 0.5}
     - {x: 0.5, y: 0, z: 0.5}
+    uvs: []
     tris: fcfffffffdfffffffefffffffcfffffffeffffffffffffff
   - foldedOut: 0
     condition: {fileID: 11400000, guid: 3afefa9ce1229714ebcb1298e01d9450, type: 2}
@@ -2742,6 +2957,7 @@ MonoBehaviour:
     - {x: -0.5, y: 0, z: -0.5}
     - {x: -1, y: 0, z: 0}
     - {x: -0.5, y: 0, z: 0.5}
+    uvs: []
     tris: f6fffffff7fffffff8fffffff6fffffff8fffffff9fffffffafffffffbfffffffcfffffffdfffffffeffffffffffffff
   - foldedOut: 0
     condition: {fileID: 11400000, guid: 6b1eb770d9301594d9040db707cea15e, type: 2}
@@ -2756,6 +2972,7 @@ MonoBehaviour:
     - {x: -0.5, y: 0, z: -0.5}
     - {x: -1, y: 0, z: 0}
     - {x: -0.5, y: 0, z: 0.5}
+    uvs: []
     tris: f6fffffff7fffffff8fffffff6fffffff8fffffff9fffffffafffffffbfffffffcfffffffdfffffffeffffffffffffff
   - foldedOut: 0
     condition: {fileID: 11400000, guid: c00008c46c584c944a0582c71a5b1445, type: 2}
@@ -2767,6 +2984,7 @@ MonoBehaviour:
     - {x: -0.5, y: 0, z: -0.5}
     - {x: -1, y: 0, z: 0}
     - {x: -0.5, y: 0, z: 0.5}
+    uvs: []
     tris: f9fffffffafffffffbfffffff9fffffffbfffffffcfffffffdfffffffeffffffffffffff
   - foldedOut: 0
     condition: {fileID: 11400000, guid: a09b5a2d73c42b6429d041fda09c83c7, type: 2}
@@ -2778,6 +2996,7 @@ MonoBehaviour:
     - {x: -0.5, y: 0, z: -0.5}
     - {x: -1, y: 0, z: 0}
     - {x: -0.5, y: 0, z: 0.5}
+    uvs: []
     tris: f9fffffffafffffffbfffffff9fffffffbfffffffcfffffffdfffffffeffffffffffffff
   - foldedOut: 0
     condition: {fileID: 11400000, guid: e9cb2d24b1448ad459e9dbcfd6832f74, type: 2}
@@ -2786,6 +3005,7 @@ MonoBehaviour:
     - {x: -0.5, y: 0, z: -0.5}
     - {x: -0.5, y: 0, z: 0.5}
     - {x: 0.5, y: 0, z: 0.5}
+    uvs: []
     tris: fcfffffffdfffffffefffffffcfffffffeffffffffffffff
   - foldedOut: 0
     condition: {fileID: 11400000, guid: 6e97dec3332529f45875df42c04388d1, type: 2}
@@ -2797,6 +3017,7 @@ MonoBehaviour:
     - {x: 0.5, y: 0, z: -0.5}
     - {x: 0, y: 0, z: -1}
     - {x: -0.5, y: 0, z: -0.5}
+    uvs: []
     tris: f9fffffffafffffffbfffffff9fffffffbfffffffcfffffffdfffffffeffffffffffffff
   - foldedOut: 0
     condition: {fileID: 11400000, guid: 72f0a78acacc275478080761220fcdbd, type: 2}
@@ -2805,6 +3026,7 @@ MonoBehaviour:
     - {x: -0.5, y: 0, z: -0.5}
     - {x: -0.5, y: 0, z: 0.5}
     - {x: 0.5, y: 0, z: 0.5}
+    uvs: []
     tris: fcfffffffdfffffffefffffffcfffffffeffffffffffffff
   - foldedOut: 0
     condition: {fileID: 11400000, guid: e76bf3a3149fb4940bf373aa21562b91, type: 2}
@@ -2813,6 +3035,7 @@ MonoBehaviour:
     - {x: -0.5, y: 0, z: -0.5}
     - {x: -0.5, y: 0, z: 0.5}
     - {x: 0.5, y: 0, z: 0.5}
+    uvs: []
     tris: fcfffffffdfffffffefffffffcfffffffeffffffffffffff
   - foldedOut: 0
     condition: {fileID: 11400000, guid: 971a5247ed918e8489ee29705f8a5e18, type: 2}
@@ -2824,6 +3047,7 @@ MonoBehaviour:
     - {x: 0.5, y: 0, z: -0.5}
     - {x: 0, y: 0, z: -1}
     - {x: -0.5, y: 0, z: -0.5}
+    uvs: []
     tris: f9fffffffafffffffbfffffff9fffffffbfffffffcfffffffdfffffffeffffffffffffff
   - foldedOut: 0
     condition: {fileID: 11400000, guid: c1e5523cb7530664f8ba85b310501da2, type: 2}
@@ -2835,6 +3059,7 @@ MonoBehaviour:
     - {x: 0.5, y: 0, z: -0.5}
     - {x: 0, y: 0, z: -1}
     - {x: -0.5, y: 0, z: -0.5}
+    uvs: []
     tris: f9fffffffafffffffbfffffff9fffffffbfffffffcfffffffdfffffffeffffffffffffff
   - foldedOut: 0
     condition: {fileID: 11400000, guid: 905a2edb7cfac7c4e810092398969234, type: 2}
@@ -2846,6 +3071,7 @@ MonoBehaviour:
     - {x: -0.5, y: 0, z: -0.5}
     - {x: -1, y: 0, z: 0}
     - {x: -0.5, y: 0, z: 0.5}
+    uvs: []
     tris: f9fffffffafffffffbfffffff9fffffffbfffffffcfffffffdfffffffeffffffffffffff
   - foldedOut: 0
     condition: {fileID: 11400000, guid: e91d53362781f6d45a86f630fbbe600f, type: 2}
@@ -2854,6 +3080,7 @@ MonoBehaviour:
     - {x: -0.5, y: 0, z: -0.5}
     - {x: -0.5, y: 0, z: 0.5}
     - {x: 0.5, y: 0, z: 0.5}
+    uvs: []
     tris: fcfffffffdfffffffefffffffcfffffffeffffffffffffff
   - foldedOut: 0
     condition: {fileID: 11400000, guid: 42065335e9b812849b0cb4b568046982, type: 2}
@@ -2862,6 +3089,7 @@ MonoBehaviour:
     - {x: -0.5, y: 0, z: -0.5}
     - {x: -0.5, y: 0, z: 0.5}
     - {x: 0.5, y: 0, z: 0.5}
+    uvs: []
     tris: fcfffffffdfffffffefffffffcfffffffeffffffffffffff
   - foldedOut: 0
     condition: {fileID: 11400000, guid: 4c4f5e013deac404bbcacc58e8e7927c, type: 2}
@@ -2873,6 +3101,7 @@ MonoBehaviour:
     - {x: 0.5, y: 0, z: -0.5}
     - {x: 0, y: 0, z: -1}
     - {x: -0.5, y: 0, z: -0.5}
+    uvs: []
     tris: f9fffffffafffffffbfffffff9fffffffbfffffffcfffffffdfffffffeffffffffffffff
   - foldedOut: 0
     condition: {fileID: 11400000, guid: 3bcb8d19dba90a7489c661459b7b97f7, type: 2}
@@ -2887,6 +3116,7 @@ MonoBehaviour:
     - {x: -0.5, y: 0, z: -0.5}
     - {x: -1, y: 0, z: 0}
     - {x: -0.5, y: 0, z: 0.5}
+    uvs: []
     tris: f6fffffff7fffffff8fffffff6fffffff8fffffff9fffffffafffffffbfffffffcfffffffdfffffffeffffffffffffff
   - foldedOut: 0
     condition: {fileID: 11400000, guid: e3f09e8e8498b3b499605823f739991d, type: 2}
@@ -2895,6 +3125,7 @@ MonoBehaviour:
     - {x: -0.5, y: 0, z: -0.5}
     - {x: -0.5, y: 0, z: 0.5}
     - {x: 0.5, y: 0, z: 0.5}
+    uvs: []
     tris: fcfffffffdfffffffefffffffcfffffffeffffffffffffff
   - foldedOut: 0
     condition: {fileID: 11400000, guid: b4c3837432dcd8f4d96b03c207276889, type: 2}
@@ -2906,6 +3137,7 @@ MonoBehaviour:
     - {x: -0.5, y: 0, z: -0.5}
     - {x: -1, y: 0, z: 0}
     - {x: -0.5, y: 0, z: 0.5}
+    uvs: []
     tris: f9fffffffafffffffbfffffff9fffffffbfffffffcfffffffdfffffffeffffffffffffff
   - foldedOut: 0
     condition: {fileID: 11400000, guid: 10b8a7115a7a847459018425e04e1166, type: 2}
@@ -2914,6 +3146,7 @@ MonoBehaviour:
     - {x: -0.5, y: 0, z: -0.5}
     - {x: -0.5, y: 0, z: 0.5}
     - {x: 0.5, y: 0, z: 0.5}
+    uvs: []
     tris: fcfffffffdfffffffefffffffcfffffffeffffffffffffff
   - foldedOut: 0
     condition: {fileID: 11400000, guid: 7418a06ebf31743479b90c1649e2ce82, type: 2}
@@ -2925,6 +3158,7 @@ MonoBehaviour:
     - {x: 0.5, y: 0, z: -0.5}
     - {x: 0, y: 0, z: -1}
     - {x: -0.5, y: 0, z: -0.5}
+    uvs: []
     tris: f9fffffffafffffffbfffffff9fffffffbfffffffcfffffffdfffffffeffffffffffffff
   - foldedOut: 0
     condition: {fileID: 11400000, guid: f7fa9a8f6daea9f41b06e1b49cbb4e10, type: 2}
@@ -2933,6 +3167,7 @@ MonoBehaviour:
     - {x: -0.5, y: 0, z: -0.5}
     - {x: -0.5, y: 0, z: 0.5}
     - {x: 0.5, y: 0, z: 0.5}
+    uvs: []
     tris: fcfffffffdfffffffefffffffcfffffffeffffffffffffff
   - foldedOut: 0
     condition: {fileID: 11400000, guid: 1213da8b54ecd9d4da3904cf34ff5458, type: 2}
@@ -2941,6 +3176,7 @@ MonoBehaviour:
     - {x: -0.5, y: 0, z: -0.5}
     - {x: -0.5, y: 0, z: 0.5}
     - {x: 0.5, y: 0, z: 0.5}
+    uvs: []
     tris: fcfffffffdfffffffefffffffcfffffffeffffffffffffff
   - foldedOut: 0
     condition: {fileID: 11400000, guid: 775f814fcf02a924780ca5a6d80a7fdd, type: 2}
@@ -2952,6 +3188,7 @@ MonoBehaviour:
     - {x: 0.5, y: 0, z: -0.5}
     - {x: 0, y: 0, z: -1}
     - {x: -0.5, y: 0, z: -0.5}
+    uvs: []
     tris: f9fffffffafffffffbfffffff9fffffffbfffffffcfffffffdfffffffeffffffffffffff
   - foldedOut: 0
     condition: {fileID: 11400000, guid: 5674c7f156cffd84a98068b7aa77f934, type: 2}
@@ -2963,6 +3200,7 @@ MonoBehaviour:
     - {x: 0.5, y: 0, z: -0.5}
     - {x: 0, y: 0, z: -1}
     - {x: -0.5, y: 0, z: -0.5}
+    uvs: []
     tris: f9fffffffafffffffbfffffff9fffffffbfffffffcfffffffdfffffffeffffffffffffff
   - foldedOut: 0
     condition: {fileID: 11400000, guid: ba957e41f182a0144a5debd896637943, type: 2}
@@ -2971,6 +3209,7 @@ MonoBehaviour:
     - {x: -0.5, y: 0, z: -0.5}
     - {x: -0.5, y: 0, z: 0.5}
     - {x: 0.5, y: 0, z: 0.5}
+    uvs: []
     tris: fcfffffffdfffffffefffffffcfffffffeffffffffffffff
   - foldedOut: 0
     condition: {fileID: 11400000, guid: 86c8584a52a9cfc43af0281e61ffa101, type: 2}
@@ -2979,6 +3218,7 @@ MonoBehaviour:
     - {x: -0.5, y: 0, z: -0.5}
     - {x: -0.5, y: 0, z: 0.5}
     - {x: 0.5, y: 0, z: 0.5}
+    uvs: []
     tris: fcfffffffdfffffffefffffffcfffffffeffffffffffffff
   - foldedOut: 0
     condition: {fileID: 11400000, guid: db13513ce5fda1f47a33693927ea8078, type: 2}
@@ -2993,6 +3233,7 @@ MonoBehaviour:
     - {x: 0.5, y: 0, z: 0.5}
     - {x: -0.5, y: 0, z: 0.5}
     - {x: 0, y: 0, z: 1}
+    uvs: []
     tris: f6fffffff7fffffff8fffffff6fffffff8fffffff9fffffffafffffffbfffffffcfffffffdfffffffeffffffffffffff
   - foldedOut: 0
     condition: {fileID: 11400000, guid: 966ba706429c67740877f3166b3f3ebd, type: 2}
@@ -3010,6 +3251,7 @@ MonoBehaviour:
     - {x: 0.5, y: 0, z: 0.5}
     - {x: -0.5, y: 0, z: 0.5}
     - {x: 0, y: 0, z: 1}
+    uvs: []
     tris: f3fffffff4fffffff5fffffff3fffffff5fffffff6fffffff7fffffff8fffffff9fffffffafffffffbfffffffcfffffffdfffffffeffffffffffffff
   - foldedOut: 0
     condition: {fileID: 11400000, guid: e7bac027ad3faab43976428aeac24d53, type: 2}
@@ -3024,6 +3266,7 @@ MonoBehaviour:
     - {x: 0.5, y: 0, z: 0.5}
     - {x: -0.5, y: 0, z: 0.5}
     - {x: 0, y: 0, z: 1}
+    uvs: []
     tris: f6fffffff7fffffff8fffffff6fffffff8fffffff9fffffffafffffffbfffffffcfffffffdfffffffeffffffffffffff
   - foldedOut: 0
     condition: {fileID: 11400000, guid: 595a43e7764e4c841a155fb9e81d215e, type: 2}
@@ -3038,6 +3281,7 @@ MonoBehaviour:
     - {x: 0.5, y: 0, z: 0.5}
     - {x: -0.5, y: 0, z: 0.5}
     - {x: 0, y: 0, z: 1}
+    uvs: []
     tris: f6fffffff7fffffff8fffffff6fffffff8fffffff9fffffffafffffffbfffffffcfffffffdfffffffeffffffffffffff
   - foldedOut: 0
     condition: {fileID: 11400000, guid: ddcc56e4f50954c49ba39298caa4e02e, type: 2}
@@ -3058,6 +3302,7 @@ MonoBehaviour:
     - {x: 0.5, y: 0, z: 0.5}
     - {x: -0.5, y: 0, z: 0.5}
     - {x: 0, y: 0, z: 1}
+    uvs: []
     tris: f0fffffff1fffffff2fffffff0fffffff2fffffff3fffffff4fffffff5fffffff6fffffff7fffffff8fffffff9fffffffafffffffbfffffffcfffffffdfffffffeffffffffffffff
   - foldedOut: 0
     condition: {fileID: 11400000, guid: 90ff820d81db4fe45a832596fbefcb13, type: 2}
@@ -3078,6 +3323,7 @@ MonoBehaviour:
     - {x: 0.5, y: 0, z: 0.5}
     - {x: -0.5, y: 0, z: 0.5}
     - {x: 0, y: 0, z: 1}
+    uvs: []
     tris: f0fffffff1fffffff2fffffff0fffffff2fffffff3fffffff4fffffff5fffffff6fffffff7fffffff8fffffff9fffffffafffffffbfffffffcfffffffdfffffffeffffffffffffff
   - foldedOut: 0
     condition: {fileID: 11400000, guid: 82c20ab0bdc07184bb79f6fd41236d58, type: 2}
@@ -3095,6 +3341,7 @@ MonoBehaviour:
     - {x: 0.5, y: 0, z: 0.5}
     - {x: -0.5, y: 0, z: 0.5}
     - {x: 0, y: 0, z: 1}
+    uvs: []
     tris: f3fffffff4fffffff5fffffff3fffffff5fffffff6fffffff7fffffff8fffffff9fffffffafffffffbfffffffcfffffffdfffffffeffffffffffffff
   - foldedOut: 0
     condition: {fileID: 11400000, guid: 9e9f38e56222fcf429723f8695cb5162, type: 2}
@@ -3112,6 +3359,7 @@ MonoBehaviour:
     - {x: 0.5, y: 0, z: 0.5}
     - {x: -0.5, y: 0, z: 0.5}
     - {x: 0, y: 0, z: 1}
+    uvs: []
     tris: f3fffffff4fffffff5fffffff3fffffff5fffffff6fffffff7fffffff8fffffff9fffffffafffffffbfffffffcfffffffdfffffffeffffffffffffff
   - foldedOut: 0
     condition: {fileID: 11400000, guid: 7ce287ce258497240943feefc4805fb8, type: 2}
@@ -3123,6 +3371,7 @@ MonoBehaviour:
     - {x: 0.5, y: 0, z: 0.5}
     - {x: -0.5, y: 0, z: 0.5}
     - {x: 0, y: 0, z: 1}
+    uvs: []
     tris: f9fffffffafffffffbfffffff9fffffffbfffffffcfffffffdfffffffeffffffffffffff
   - foldedOut: 0
     condition: {fileID: 11400000, guid: 3e667d78780ec8947b52322692b789e9, type: 2}
@@ -3137,6 +3386,7 @@ MonoBehaviour:
     - {x: 0.5, y: 0, z: 0.5}
     - {x: -0.5, y: 0, z: 0.5}
     - {x: 0, y: 0, z: 1}
+    uvs: []
     tris: f6fffffff7fffffff8fffffff6fffffff8fffffff9fffffffafffffffbfffffffcfffffffdfffffffeffffffffffffff
   - foldedOut: 0
     condition: {fileID: 11400000, guid: fe4acd521f2479b45b56b3689f172cae, type: 2}
@@ -3148,6 +3398,7 @@ MonoBehaviour:
     - {x: 0.5, y: 0, z: 0.5}
     - {x: -0.5, y: 0, z: 0.5}
     - {x: 0, y: 0, z: 1}
+    uvs: []
     tris: f9fffffffafffffffbfffffff9fffffffbfffffffcfffffffdfffffffeffffffffffffff
   - foldedOut: 0
     condition: {fileID: 11400000, guid: 22b260575c0439b4da47afdca75c0bcb, type: 2}
@@ -3159,6 +3410,7 @@ MonoBehaviour:
     - {x: 0.5, y: 0, z: 0.5}
     - {x: -0.5, y: 0, z: 0.5}
     - {x: 0, y: 0, z: 1}
+    uvs: []
     tris: f9fffffffafffffffbfffffff9fffffffbfffffffcfffffffdfffffffeffffffffffffff
   - foldedOut: 0
     condition: {fileID: 11400000, guid: d488256189c830f43a2187536512a5de, type: 2}
@@ -3176,6 +3428,7 @@ MonoBehaviour:
     - {x: 0.5, y: 0, z: 0.5}
     - {x: -0.5, y: 0, z: 0.5}
     - {x: 0, y: 0, z: 1}
+    uvs: []
     tris: f3fffffff4fffffff5fffffff3fffffff5fffffff6fffffff7fffffff8fffffff9fffffffafffffffbfffffffcfffffffdfffffffeffffffffffffff
   - foldedOut: 0
     condition: {fileID: 11400000, guid: 46933af6ad4573d4d9e93b96ea70c9d2, type: 2}
@@ -3193,8 +3446,9 @@ MonoBehaviour:
     - {x: 0.5, y: 0, z: 0.5}
     - {x: -0.5, y: 0, z: 0.5}
     - {x: 0, y: 0, z: 1}
+    uvs: []
     tris: f3fffffff4fffffff5fffffff3fffffff5fffffff6fffffff7fffffff8fffffff9fffffffafffffffbfffffffcfffffffdfffffffeffffffffffffff
-  - foldedOut: 0
+  - foldedOut: 1
     condition: {fileID: 11400000, guid: fcbbca37a289c884aa135a1ef6c0e19d, type: 2}
     verts:
     - {x: 0.5, y: 0, z: -0.5}
@@ -3207,6 +3461,7 @@ MonoBehaviour:
     - {x: 0.5, y: 0, z: 0.5}
     - {x: -0.5, y: 0, z: 0.5}
     - {x: 0, y: 0, z: 1}
+    uvs: []
     tris: f6fffffff7fffffff8fffffff6fffffff8fffffff9fffffffafffffffbfffffffcfffffffdfffffffeffffffffffffff
   - foldedOut: 0
     condition: {fileID: 11400000, guid: f933b542319391a4db3eeffcc6f432c8, type: 2}
@@ -3221,6 +3476,7 @@ MonoBehaviour:
     - {x: 0.5, y: 0, z: 0.5}
     - {x: -0.5, y: 0, z: 0.5}
     - {x: 0, y: 0, z: 1}
+    uvs: []
     tris: f6fffffff7fffffff8fffffff6fffffff8fffffff9fffffffafffffffbfffffffcfffffffdfffffffeffffffffffffff
   mapFoldout: 0
   tileFoldout: 1

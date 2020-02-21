@@ -17,6 +17,22 @@ namespace LevelGeneration
         public Vector2Int size = new Vector2Int(3, 3);
         public bool[] condition = new bool[9];
 
+        private int _id = -1;
+        public int id
+        {
+            get
+            {
+                if (_id == -1)
+                {
+                    _id = Get3x3AsInt();
+                    return _id;
+                }
+                else
+                    return _id;
+            }
+            set { _id = Get3x3AsInt(); }
+        }
+
         public int Get3x3AsInt()
         {
             if (size.x != 3 || size.y != 3)
@@ -25,7 +41,7 @@ namespace LevelGeneration
             int id = 0;
             for (int i = 0; i < size.x * size.y; i++)
             {
-                int val = (int)(condition[i] == true ? 1 : 0);
+                int val = (condition[i] == true ? 1 : 0);
                 id += val << i;
             }
 
@@ -47,7 +63,7 @@ namespace LevelGeneration
                 Generate3x3Grid();
             }*/
 
-            if(GUILayout.Button("Log int id for this layout"))
+            if (GUILayout.Button("Log int id for this layout"))
             {
                 Debug.Log(Target.Get3x3AsInt());
             }
@@ -55,35 +71,42 @@ namespace LevelGeneration
             Vector2Int size = EditorGUILayout.Vector2IntField("Dimensions", Target.size);
             if (size.x <= 0 || size.y <= 0 || size.x % 2 != 1 || size.y % 2 != 1)
                 return;
-
-            Target.size = size;
-
-            if(size.x * size.y > Target.condition.Length)
+            else if (size.x != Target.size.x || size.y != Target.size.y)
             {
-                bool[] c = new bool[size.x * size.y];
+                Target.size = size;
 
-                for (int i = 0; i < Target.condition.Length; i++)
-                    c[i] = Target.condition[i];
+                if (size.x * size.y > Target.condition.Length)
+                {
+                    bool[] c = new bool[size.x * size.y];
 
-                Target.condition = c;
+                    for (int i = 0; i < Target.condition.Length; i++)
+                        c[i] = Target.condition[i];
+
+                    Target.condition = c;
+                }
+                else if (size.x * size.y < Target.condition.Length)
+                {
+                    bool[] c = new bool[size.x * size.y];
+                    int length = size.x * size.y;
+                    for (int i = 0; i < length; i++)
+                        c[i] = Target.condition[i];
+
+                    Target.condition = c;
+                }
             }
-            else if(size.x * size.y < Target.condition.Length)
-            {
-                bool[] c = new bool[size.x * size.y];
-                int length = size.x * size.y;
-                for (int i = 0; i < length; i++)
-                    c[i] = Target.condition[i];
 
-                Target.condition = c;
-            }
-
-            for(int y = 0; y < size.y; y++)
+            for (int y = 0; y < size.y; y++)
             {
                 EditorGUILayout.BeginHorizontal();
                 for (int x = 0; x < size.x; x++)
                 {
                     int index = y * size.x + x;
-                    Target.condition[index] = EditorGUILayout.Toggle(Target.condition[index]);
+                    bool b = EditorGUILayout.Toggle(Target.condition[index]);
+                    if (b != Target.condition[index])
+                    {
+                        Target.condition[index] = b;
+                        Target.id = -1;
+                    }
                 }
                 EditorGUILayout.EndHorizontal();
             }
@@ -91,6 +114,10 @@ namespace LevelGeneration
             EditorUtility.SetDirty(target);
         }
 
+        /// <summary>
+        /// Generates 511 assets at target path which are 3x3 cell conditions.
+        /// One condition for each state possible in a 3x3 binary matrix.
+        /// </summary>
         public void Generate3x3Grid()
         {
             int total = (int)Mathf.Pow(2, 9);

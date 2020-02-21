@@ -1,0 +1,56 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8542aec37296b3440a9c3d1be7f40fe7, type: 3}
+  m_Name: TestAtlas
+  m_EditorClassIdentifier: 
+  previewMaterial: {fileID: 2100000, guid: a0f2d223ba2ac0a4da42fa66babeffaa, type: 2}
+  overlayMaterial: {fileID: 2100000, guid: cb592e1d6e9807248b7b8687ace8dbb9, type: 2}
+  atlas: {fileID: 2800000, guid: 44334a5400f680f4bb3372642959e003, type: 3}
+  tileSets:
+  - tileShapeBuckets:
+    - variantUVs:
+      - uvMap:
+        - {x: 0, y: 0.984375}
+        - {x: 0, y: 0}
+      - uvMap: []
+    - variantUVs: []
+    - variantUVs: []
+    - variantUVs: []
+    - variantUVs: []
+    - variantUVs: []
+    - variantUVs: []
+    - variantUVs: []
+    - variantUVs: []
+    - variantUVs: []
+    - variantUVs: []
+    - variantUVs: []
+    - variantUVs: []
+    - variantUVs: []
+    - variantUVs: []
+    - variantUVs: []
+    - variantUVs: []
+    - variantUVs: []
+    - variantUVs: []
+    - variantUVs: []
+    - variantUVs: []
+  - tileShapeBuckets: []
+  previewScale: 5
+  gridSize: {x: 8, y: 8}
+  gridColour: {r: 1, g: 1, b: 1, a: 0.49803922}
+  selectionHighlight: {r: 1, g: 0, b: 1, a: 0.49803922}
+  previewScaleMode: 0
+  category: 0
+  shape: 0
+  tileVariant: 0
+  conditionIndex: 0
+  condition: {fileID: 11400000, guid: 01f5eb0047845d44d9f2ce15a5db936d, type: 2}
+  uvID: 0

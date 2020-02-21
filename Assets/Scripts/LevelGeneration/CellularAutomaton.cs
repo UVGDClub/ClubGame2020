@@ -7,6 +7,13 @@ namespace LevelGeneration
 {
     /// <summary>
     /// Provides a rule set to convolve over a 2d array of bits to generate a level.
+    /// 
+    /// TODO:
+    /// Try working around tile rules. It seems unreasonable to need so many.
+    /// Since we are generating them, probably there is a way to streamline this process.
+    /// 
+    /// We can probably grab a unique id for each tile type here.
+    /// Then we can store the ids of cells in the map when we go to produce the mesh.
     /// </summary>
     [CreateAssetMenu(fileName = "new Cellular Automata", menuName = "Level Generation/Cellular Automaton")]
     public class CellularAutomaton : ScriptableObject
@@ -44,6 +51,7 @@ namespace LevelGeneration
         public bool foldedOut;
         public CellCondition condition;
         public Vector3[] verts;
+        public Vector2[] uvs;
         public int[] tris;
     }
 
@@ -524,6 +532,26 @@ namespace LevelGeneration
             }
         }
 
+        public void ResizeUVs(TileRule t, int uvLength)
+        {
+            if(uvLength < t.uvs.Length)
+            {
+                Vector2[] uvs = new Vector2[uvLength];
+                for (int k = 0; k < t.uvs.Length; k++)
+                    uvs[k] = t.uvs[k];
+
+                t.uvs = uvs;
+            }
+            else if(uvLength > t.uvs.Length)
+            {
+                Vector2[] uvs = new Vector2[uvLength];
+                for (int k = 0; k < t.tris.Length; k++)
+                    uvs[k] = t.uvs[k];
+
+                t.uvs = uvs;
+            }
+        }
+
         public void UseDefaultSquare(TileRule t)
         {
             t.verts = new Vector3[4];
@@ -532,6 +560,13 @@ namespace LevelGeneration
             t.verts[1] = new Vector3(-0.5f, 0, -0.5f);
             t.verts[2] = new Vector3(-0.5f, 0, 0.5f);
             t.verts[3] = new Vector3(0.5f, 0, 0.5f);
+
+            t.uvs = new Vector2[4];
+            float eigth = 1.0f / 8;
+            t.uvs[0] = new Vector2(2*eigth, 2*eigth);
+            t.uvs[1] = new Vector2(eigth, 2*eigth);
+            t.uvs[2] = new Vector2(eigth, eigth);
+            t.uvs[3] = new Vector2(2*eigth, eigth);
 
             t.tris = new int[6];
             t.tris[0] = -4;
