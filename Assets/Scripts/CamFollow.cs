@@ -6,6 +6,8 @@ public class CamFollow : MonoBehaviour
 {
     Vector3 offset;
 
+	Camera cam;
+
     public Transform player;
     public float smoothing = 5f;
 	public float offsetX = 0f;
@@ -15,8 +17,16 @@ public class CamFollow : MonoBehaviour
 	public float angleY = 0f;
 	public float angleZ = 0f;
 
+	public float FoV = 60f;
+
+	private void Start()
+	{
+		cam = GetComponent<Camera>();
+	}
+
     private void Update()
     {
+		cam.fieldOfView = FoV;
 		offset = new Vector3(offsetX, offsetY, offsetZ);
 		transform.eulerAngles = new Vector3(angleX, angleY, angleZ);
     }

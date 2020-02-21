@@ -14,8 +14,6 @@ public class PlayerMoveScript : MonoBehaviour
 
 	// Variables for animation
 	private Animator anim;
-	int animTurnX;
-	int animTurnY;
 	int isSwinging;
 	int isDead;
 	int isDying;
