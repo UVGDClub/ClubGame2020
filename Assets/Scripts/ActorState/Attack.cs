@@ -13,7 +13,10 @@ namespace StateMachine
 
         public override IEnumerator Execute(Enemy enemy)
         {
-            yield return null;
+            while (enemy.curState.GetInstanceID() == GetInstanceID())
+            {
+                yield return null;
+            }
         }
 
         public override void OnExit(Enemy enemy)
