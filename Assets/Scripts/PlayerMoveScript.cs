@@ -46,7 +46,7 @@ public class PlayerMoveScript : MonoBehaviour
 			root2 = 1f;
 		}
 		rb.velocity = new Vector3(moveX*moveSpeed*root2, rb.velocity.y, moveY*moveSpeed*root2);
-		Debug.Log(Input.GetAxis("Horizontal"));
+		//Debug.Log(Input.GetAxis("Horizontal"));
 		//transform.right = controls["Turn"].ReadValue<Vector2>();
 
 		// Animation -------------------------------------------------------------
