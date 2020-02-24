@@ -8,17 +8,20 @@ namespace StateMachine
     {
         public override void OnEnter(Enemy enemy)
         {
-            base.OnEnter(enemy);
+            
         }
 
         public override IEnumerator Execute(Enemy enemy)
         {
-            return base.Execute(enemy);
+            while (enemy.curState.GetInstanceID() == GetInstanceID())
+            {
+                yield return null;
+            }
         }
 
         public override void OnExit(Enemy enemy)
         {
-            base.OnExit(enemy);
+            
         }
     }
 }

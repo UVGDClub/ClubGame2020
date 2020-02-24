@@ -7,6 +7,7 @@ using StateMachine;
 public class StateSchema : ScriptableObject
 {
     public Idle idle;
+    public Approach approach;
     public Attack attack;
     public Retreat retreat;
 }
