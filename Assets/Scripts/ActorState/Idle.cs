@@ -10,7 +10,7 @@ namespace StateMachine
         {
             enemy.curState = this;
             enemy.StartCoroutine(Execute(enemy));
-            enemy.StartCoroutine(IdleGrowl(2.0f));
+            //enemy.StartCoroutine(IdleGrowl(2.0f));
         }
         private IEnumerator IdleGrowl(float waitTime)
         {
@@ -35,7 +35,7 @@ namespace StateMachine
             Physics.Raycast(ray, out hit);
             if (hit.transform)
             {
-                Debug.Log(hit.transform.position);
+                Debug.Log("ray cast: " + hit.transform.position);
             }
             //transform.position = new Vector3(x, player.transform.position.y, z);
             if (hit.transform && hit.transform.CompareTag("Player"))
@@ -54,7 +54,7 @@ namespace StateMachine
             bool playerSpotted = false;
             while (enemy.curState.GetInstanceID() == GetInstanceID())
             {
-                //Debug.Log("Searching for player");
+                Debug.Log("Searching for player");
                 //look for player
                 playerSpotted = searchForPlayer(enemy);
                 //if we find them...
@@ -65,7 +65,7 @@ namespace StateMachine
                 }
                 else
                 {
-                    Debug.Log("rotating");
+                    Debug.Log("Idle, rotating");
                     enemy.transform.Rotate(0, 1f, 0);
                 }
                 yield return null;

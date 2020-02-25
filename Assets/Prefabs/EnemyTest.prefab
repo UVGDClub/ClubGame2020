@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 392668778565125146}
   - component: {fileID: 1542460331401331759}
   - component: {fileID: 2850628008681923037}
+  - component: {fileID: 8581430029728206215}
   m_Layer: 0
   m_Name: EnemyTest
   m_TagString: Untagged
@@ -86,6 +87,24 @@ NavMeshAgent:
   m_BaseOffset: 0
   m_WalkableMask: 4294967295
   m_ObstacleAvoidanceType: 4
+--- !u!114 &8581430029728206215
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3449041841192003368}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 374d7cd9e38373e479d5becdd5a47bd6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  moveSpeed: 5
+  rb: {fileID: 0}
+  stateSchema: {fileID: 11400000, guid: 69c79b50a6848f249b2c6cd1abe528cb, type: 2}
+  curState: {fileID: 11400000, guid: d6a49a6040c717d49890ba7f32dd893d, type: 2}
+  agent: {fileID: 2850628008681923037}
+  anim: {fileID: 9161327579854921462}
 --- !u!1001 &6112270806420609174
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -98,11 +117,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: enemyBig_Animation
       objectReference: {fileID: 0}
-    - target: {fileID: -6057140222963153312, guid: 8019575d294fe6744b656784893884e5,
-        type: 3}
-      propertyPath: m_Controller
-      value: 
-      objectReference: {fileID: 9100000, guid: 1000d887c82c31443b1474a32b46f0fd, type: 2}
     - target: {fileID: -4216859302048453862, guid: 8019575d294fe6744b656784893884e5,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -173,6 +187,11 @@ PrefabInstance:
       propertyPath: m_LocalScale.z
       value: 2
       objectReference: {fileID: 0}
+    - target: {fileID: -6057140222963153312, guid: 8019575d294fe6744b656784893884e5,
+        type: 3}
+      propertyPath: m_Controller
+      value: 
+      objectReference: {fileID: 9100000, guid: 1000d887c82c31443b1474a32b46f0fd, type: 2}
     - target: {fileID: 9170109123616457208, guid: 8019575d294fe6744b656784893884e5,
         type: 3}
       propertyPath: m_Materials.Array.data[0]
@@ -183,6 +202,12 @@ PrefabInstance:
 --- !u!4 &1272707955831698316 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: -4216859302048453862, guid: 8019575d294fe6744b656784893884e5,
+    type: 3}
+  m_PrefabInstance: {fileID: 6112270806420609174}
+  m_PrefabAsset: {fileID: 0}
+--- !u!95 &9161327579854921462 stripped
+Animator:
+  m_CorrespondingSourceObject: {fileID: -6057140222963153312, guid: 8019575d294fe6744b656784893884e5,
     type: 3}
   m_PrefabInstance: {fileID: 6112270806420609174}
   m_PrefabAsset: {fileID: 0}

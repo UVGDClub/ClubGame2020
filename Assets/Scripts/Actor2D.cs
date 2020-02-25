@@ -5,12 +5,12 @@ using UnityEngine.InputSystem;
 using UnityEngine.InputSystem.Utilities;
 using StateMachine;
 
-public class Actor : MonoBehaviour
+public class Actor2D : MonoBehaviour
 {
     public float moveSpeed = 3f;
-    //public Rigidbody rb;
+    public Rigidbody2D rb;
     public void OnDrawGizmos()
     {
-        //Gizmos.DrawLine(rb.position, (transform.position + transform.right));
+        Gizmos.DrawLine(rb.position, (transform.position + transform.right));
     }
 }

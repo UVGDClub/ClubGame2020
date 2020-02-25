@@ -44,6 +44,7 @@ namespace StateMachine
                 dist = playerLocation - enemy.transform.position;
                 if(dist.magnitude < 2.0f)
                 {
+					Debug.Log("Attack!");
                     enemy.stateSchema.attack.OnEnter(enemy);
                     yield break; //end this coroutine
                 }
@@ -52,6 +53,7 @@ namespace StateMachine
         }
         public override void OnExit(Enemy enemy)
         {
+			Debug.Log("End Approach");
             enemy.anim.SetInteger("Anim_isRunning", 0);
         }
     }

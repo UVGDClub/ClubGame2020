@@ -1950,11 +1950,6 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 4569816311201118131, guid: 91acc829b0a54e844ab473fab71b08c9,
-        type: 3}
-      propertyPath: m_Enabled
-      value: 1
-      objectReference: {fileID: 0}
     - target: {fileID: 4569816311201118132, guid: 91acc829b0a54e844ab473fab71b08c9,
         type: 3}
       propertyPath: m_Enabled
@@ -1999,6 +1994,11 @@ PrefabInstance:
     - target: {fileID: 820093396, guid: 91acc829b0a54e844ab473fab71b08c9, type: 3}
       propertyPath: m_Enabled
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4569816311201118131, guid: 91acc829b0a54e844ab473fab71b08c9,
+        type: 3}
+      propertyPath: m_Enabled
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 91acc829b0a54e844ab473fab71b08c9, type: 3}
@@ -3146,6 +3146,7 @@ MonoBehaviour:
   stateSchema: {fileID: 11400000, guid: 69c79b50a6848f249b2c6cd1abe528cb, type: 2}
   curState: {fileID: 11400000, guid: d6a49a6040c717d49890ba7f32dd893d, type: 2}
   agent: {fileID: 817734089}
+  anim: {fileID: 2501672589505871202}
 --- !u!1 &868594232 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 4569816311201118129, guid: 91acc829b0a54e844ab473fab71b08c9,
@@ -6887,3 +6888,9 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 9124b90e5e4591d499758047e112ee05, type: 3}
+--- !u!95 &2501672589505871202 stripped
+Animator:
+  m_CorrespondingSourceObject: {fileID: 9161327579854921462, guid: 9124b90e5e4591d499758047e112ee05,
+    type: 3}
+  m_PrefabInstance: {fileID: 2501672589505871201}
+  m_PrefabAsset: {fileID: 0}
