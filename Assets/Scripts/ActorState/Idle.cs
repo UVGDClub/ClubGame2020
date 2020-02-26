@@ -75,6 +75,11 @@ namespace StateMachine
         public override void OnExit(Enemy enemy)
         {
             //not sure if this will be needed in this state
+            foreach(StateTransitionCondition c in transitionCondition)
+            {
+                if (c.condition(enemy))
+                    c.state.OnEnter(enemy);
+            }
         }
     }
 }

@@ -14,6 +14,8 @@ public class Enemy : Actor
     public NavMeshAgent agent;
     [SerializeField]
     public Animator anim;
+
+    public Player target;
     private void Awake()
     {
         agent = GetComponent<NavMeshAgent>();

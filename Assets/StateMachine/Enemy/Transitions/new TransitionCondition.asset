@@ -9,8 +9,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 17fa12037e6b29d47b38aeb2b099f2a3, type: 3}
-  m_Name: PlayerSchema
+  m_Script: {fileID: 11500000, guid: bcb0efa979817394d8fe06719b7e5975, type: 3}
+  m_Name: new TransitionCondition
   m_EditorClassIdentifier: 
-  idle: {fileID: 11400000, guid: 6860e9cae24823145b80e7e7b776e089, type: 2}
-  move: {fileID: 11400000, guid: 6d745e02de7aa1f47932b01ff025548d, type: 2}
+  state: {fileID: 0}
