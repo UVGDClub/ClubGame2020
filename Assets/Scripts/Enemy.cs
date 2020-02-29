@@ -14,12 +14,19 @@ public class Enemy : Actor
     public NavMeshAgent agent;
     [SerializeField]
     public Animator anim;
-
-    public Player target;
+    [SerializeField]
+    public GameController gameController;
+    
+    public Transform target;
     private void Awake()
     {
         agent = GetComponent<NavMeshAgent>();
         anim = GetComponentInChildren<Animator>();
+        if(gameController==null)
+        {
+            gameController = FindObjectOfType<GameController>();
+        }
+        target = null;
         Init();
     }
 
@@ -27,5 +34,12 @@ public class Enemy : Actor
     public void Init()
     {
         stateSchema.idle.OnEnter(this);
+    }
+    public IEnumerator OnDeath()
+    {
+        anim.SetInteger("Anim_isDead", 1);
+        yield return new WaitForSeconds(1f);
+        Destroy(gameObject);
+
     }
 }
