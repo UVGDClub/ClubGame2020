@@ -48,7 +48,7 @@ public class PlayerMoveScript : MonoBehaviour
 	
 	void Start()
 	{
-
+		
 		audio = GetComponents<AudioSource>();
 		rb = GetComponent<Rigidbody>();
 		// Variables for animation
@@ -60,6 +60,7 @@ public class PlayerMoveScript : MonoBehaviour
 
 	private void Attack()
 	{
+		
 		if(!gameObject.activeInHierarchy)
 		{
 			return;
@@ -70,7 +71,8 @@ public class PlayerMoveScript : MonoBehaviour
 		//rb.transform.position = new Vector3(rb.transform.position.x + (direction.x * moveSpeed), rb.transform.position.y, rb.transform.position.z + (direction.y * moveSpeed));
 	}
 	public void Move(InputAction.CallbackContext value)
-	{
+	{ 
+		
         if(!gameObject.activeInHierarchy)
 		{
 			return;
