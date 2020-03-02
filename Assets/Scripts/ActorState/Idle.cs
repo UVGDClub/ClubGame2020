@@ -26,46 +26,43 @@ namespace StateMachine
         }
         private bool searchForPlayer(Enemy enemy)
         {
-            Vector3 dist;
-            RaycastHit hit;
-            //transform.position = new Vector3( x, player.transform.position.y, z);
-            Vector3 origin = new Vector3(enemy.transform.position.x, 1f, enemy.transform.position.z);
-            //Vector3 direction = new Vector3(10, 0, 10);
-            Ray ray = new Ray(origin, enemy.transform.forward);
-            Physics.Raycast(ray, out hit);
-            if (hit.transform)
+            if(enemy.gameController.numPlayers == 0)
             {
-                Debug.Log("ray cast: " + hit.transform.position);
+                return false;
             }
-            //transform.position = new Vector3(x, player.transform.position.y, z);
-            if (hit.transform && hit.transform.CompareTag("Player"))
+            float minDist = int.MaxValue;
+            Vector2 curDist;
+            foreach(GameObject g in enemy.gameController.activePlayers)
             {
-
-                dist = enemy.transform.position - hit.transform.position;
-                if(dist.magnitude < 20)
+                if (g != null)
                 {
-                    return true;
+                    curDist = g.transform.position - enemy.transform.position;
+                    if (curDist.magnitude < minDist)
+                    {
+                        enemy.target = g.transform;
+                        minDist = curDist.magnitude;
+                    }
                 }
             }
-            return false;
+            return true;
         }
         public override IEnumerator Execute(Enemy enemy)
         {
             bool playerSpotted = false;
             while (enemy.curState.GetInstanceID() == GetInstanceID())
             {
-                Debug.Log("Searching for player");
                 //look for player
                 playerSpotted = searchForPlayer(enemy);
                 //if we find them...
                 if(playerSpotted)
                 {
-                    enemy.stateSchema.approach.OnEnter(enemy);
+                    Debug.Log("Player found!");
+                    OnExit(enemy);
+                    //enemy.stateSchema.approach.OnEnter(enemy);
                     yield break; //end this coroutine
                 }
                 else
                 {
-                    Debug.Log("Idle, rotating");
                     enemy.transform.Rotate(0, 1f, 0);
                 }
                 yield return null;
@@ -74,6 +71,7 @@ namespace StateMachine
 
         public override void OnExit(Enemy enemy)
         {
+
             //not sure if this will be needed in this state
             foreach(StateTransitionCondition c in transitionCondition)
             {

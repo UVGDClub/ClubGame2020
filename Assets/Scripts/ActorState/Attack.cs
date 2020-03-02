@@ -10,14 +10,17 @@ namespace StateMachine
         {
 			enemy.curState = this;
 			enemy.anim.SetInteger("Anim_isSwinging", 1);
+            Debug.Log("Attack!");
             enemy.StartCoroutine(Execute(enemy));
         }
 
         public override IEnumerator Execute(Enemy enemy)
         {
-            while (enemy.curState.GetInstanceID() == GetInstanceID())
+            yield return new WaitForSeconds(0.8f);
+            OnExit(enemy);
+            /*while (enemy.curState.GetInstanceID() == GetInstanceID())
             {
-				
+               // Debug.Log(enemy.anim.GetInteger("Anim_isSwinging"));
 				//current tranition between states may cause crashes
 				/*
 				if(enemy.anim.GetCurrentAnimatorStateInfo(0).IsName("Idle"))
@@ -27,14 +30,15 @@ namespace StateMachine
 					enemy.stateSchema.idle.OnEnter(enemy);
 					yield break;
 				}
-				*/
+				
                 yield return null;
-            }
+            }*/
         }
 
         public override void OnExit(Enemy enemy)
         {
-            
+            //not sure if this will be needed in this state
+            enemy.stateSchema.idle.OnEnter(enemy);
         }
     }
 }
