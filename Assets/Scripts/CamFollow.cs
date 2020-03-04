@@ -19,7 +19,7 @@ public class CamFollow : MonoBehaviour
 
 	public GameObject leftEdge;
 	public GameObject rightEdge;
-
+	public float edgeOffset = 0.1f;
 
 	public float FoV = 60f;
 
@@ -27,8 +27,8 @@ public class CamFollow : MonoBehaviour
 	{
 		cam = GetComponent<Camera>();
 
-		leftEdge.transform.position = cam.ViewportToWorldPoint(new Vector3(0, 0.5f, player.position.z));
-		rightEdge.transform.position = cam.ViewportToWorldPoint(new Vector3(1, 0.5f, player.position.z));
+		leftEdge.transform.position = cam.ViewportToWorldPoint(new Vector3(edgeOffset, 0.5f, player.position.z));
+		rightEdge.transform.position = cam.ViewportToWorldPoint(new Vector3(1 - edgeOffset, 0.5f, player.position.z));
 	}
 
 	private void Update()

@@ -27,7 +27,7 @@ public class GameController : MonoBehaviour
         {
            spawnPoint = GameObject.FindGameObjectWithTag("SpawnPoint").transform;
         }
-        StartCoroutine(SpawnEnemy());
+       // StartCoroutine(SpawnEnemy());
     }
     private IEnumerator SpawnEnemy()
     {
