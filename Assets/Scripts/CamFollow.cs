@@ -22,9 +22,13 @@ public class CamFollow : MonoBehaviour
 	private void Start()
 	{
 		cam = GetComponent<Camera>();
+		Vector3 left_edge = cam.ViewportToWorldPoint(new Vector3(0, 0.5f, player.position.z));
+		Vector3 right_edge = cam.ViewportToWorldPoint(new Vector3(1, 0.5f, player.position.z));
+
+
 	}
 
-    private void Update()
+	private void Update()
     {
 		cam.fieldOfView = FoV;
 		offset = new Vector3(offsetX, offsetY, offsetZ);
