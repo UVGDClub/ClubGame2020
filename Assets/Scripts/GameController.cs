@@ -72,6 +72,7 @@ public class GameController : MonoBehaviour
         Debug.Log(p + " joined");
         p.transform.position = spawnPoint.position;
         activePlayers[numPlayers++] = p.gameObject;
+        cam.enabled = true;
     }
     // Update is called once per frame
     void Update()
