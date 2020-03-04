@@ -9,6 +9,7 @@ namespace StateMachine
     public abstract class BaseState : ScriptableObject
     {
         public StateTransitionCondition[] transitionCondition;
+
         public virtual void OnEnter(Enemy enemy)
         {
             throw new NotImplementedException();

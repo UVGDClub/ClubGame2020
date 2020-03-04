@@ -34,8 +34,11 @@ public class CamFollow : MonoBehaviour
     // Update is called once per frame
     void FixedUpdate()
     {
-        Vector3 targetPos = player.position + offset;
+		if (player != null)
+		{
+			Vector3 targetPos = player.position + offset;
 
-        transform.position = Vector3.Lerp(transform.position, targetPos, smoothing * Time.deltaTime);
+			transform.position = Vector3.Lerp(transform.position, targetPos, smoothing * Time.deltaTime);
+		}
     }
 }

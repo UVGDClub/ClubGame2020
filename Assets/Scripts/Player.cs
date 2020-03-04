@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class Player : Actor2D
 {
-    public Controls controls;
+    public ControlsMaster controls;
 
     bool lockControls;
     float lockTimer;
@@ -27,7 +27,7 @@ public class Player : Actor2D
     //todo: make this be called by our game controller
     private void Init()
     {
-        controls = new Controls();
+        controls = new ControlsMaster();
         StartCoroutine(HandleInput());
     }
 

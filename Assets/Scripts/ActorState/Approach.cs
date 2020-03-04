@@ -18,43 +18,43 @@ namespace StateMachine
             float x;
             Ray ray;
             float z;
-            do
-            {
-                x = Random.Range(-50, 50);
-                z = Random.Range(-50, 50);
-                //transform.position = new Vector3( x, player.transform.position.y, z);
-                Vector3 location = new Vector3(x, 1f, z);
-                Vector3 direction = enemy.transform.forward;
-                ray = new Ray(location, direction);
-                Physics.Raycast(ray, out hit);
-                if (hit.transform && hit.transform.CompareTag("Player"))
-                    break;
-            } while (Time.time - callTime < 0.5f);
 
-            return hit.transform.position;
+            //transform.position = new Vector3( x, player.transform.position.y, z);
+            Vector3 location = new Vector3(enemy.transform.position.x, 1f, enemy.transform.position.z);
+            Vector3 direction = enemy.transform.forward;
+            ray = new Ray(location, direction);
+            Physics.Raycast(ray, out hit,maxDistance:2);
+            if (hit.transform && hit.transform.CompareTag("Player"))
+                return hit.transform.position;
+            return enemy.transform.position;
+
         }
         public override IEnumerator Execute(Enemy enemy)
         {
-            Vector3 playerLocation;
             Vector3 dist;
             while (enemy.curState.GetInstanceID() == GetInstanceID())
             {
-                playerLocation = searchForPlayer(enemy,Time.time);
-                enemy.agent.SetDestination(playerLocation);
-                dist = playerLocation - enemy.transform.position;
-                if(dist.magnitude < 2.0f)
+                enemy.agent.SetDestination(enemy.target.transform.position);
+                dist = enemy.target.transform.position - enemy.transform.position;
+                if (dist.magnitude < 2.0f)
                 {
-					Debug.Log("Attack!");
-                    enemy.stateSchema.attack.OnEnter(enemy);
+
+                    OnExit(enemy);
+
+
                     yield break; //end this coroutine
                 }
+                
                 yield return null;
             }
         }
         public override void OnExit(Enemy enemy)
         {
-			Debug.Log("End Approach");
-            enemy.anim.SetInteger("Anim_isRunning", 0);
+            Debug.Log("End Approach");
+            enemy.anim.SetInteger("Anim_isSwinging", 1);
+            enemy.agent.SetDestination(enemy.transform.position);
+
+            enemy.stateSchema.attack.OnEnter(enemy);
         }
     }
 }

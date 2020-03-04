@@ -25,7 +25,7 @@ public class MainMenu : MonoBehaviour
         //SceneManager.LoadScene("Gameloop");
 		
 		//temporary scene:
-		SceneManager.LoadScene("WorldTest1");
+		SceneManager.LoadScene("WorldTest2");
     }
 
     public void AboutButton()
